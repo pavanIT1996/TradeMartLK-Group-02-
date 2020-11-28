@@ -4,6 +4,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import WebPageClass.GarageLoginPage;
 import WebPageClass.SupplierDashboardPage;
 import WebPageClass.SupplierLoginPage;
 import org.openqa.selenium.Capabilities;
@@ -19,7 +20,7 @@ public class BaseTest {
     private String path="C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\LibraryFiles\\ChromeDriver\\chromedriverV86.exe";
     
     SupplierLoginPage objSupLogin;
-
+    GarageLoginPage objGarLogin;
     
     @BeforeClass()
     public void setup() {
@@ -37,11 +38,17 @@ public class BaseTest {
     }
     
     
-    public SupplierLoginPage goLoginPage(){
+    public SupplierLoginPage goSupLoginPage(){
     	System.out.println(driver.toString()+" 01");
     	driver.get("https://www.trademartlk.com/operation/dashboard/supplier-login-sqag2");
        	System.out.println(driver.toString()+" 02");
     	return new SupplierLoginPage(driver);
     }
  
+    public GarageLoginPage goGarLoginPage(){
+    	System.out.println(driver.toString()+" 01");
+    	driver.get("https://www.trademartlk.com/operation/dashboard/garage-login-deshan");
+       	System.out.println(driver.toString()+" 02");
+    	return new GarageLoginPage(driver);
+    }
 }

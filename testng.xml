@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TradeMartLK Web App">
+  <test thread-count="5" name="Regression">
+    <classes>
+      <class name="TestClass.GarageLoginPageTest"/>
+      <class name="TestClass.GarageUserManagementPageTest"/>
+      <class name="TestClass.SupplierEditAgentPageTest"/>
+      <class name="TestClass.SupplierUserManagementPageTest"/>
+      <class name="TestClass.GarageEditProfilePageTest"/>
+      <class name="TestClass.SupplierPurchaseOrderPageTest"/>
+      <class name="TestClass.GaragePurchaseOrderPageTest"/>
+      <class name="TestClass.SupplierLoginPageTest"/>
+      <class name="TestClass.GarageDashboardPageTest"/>
+      <class name="TestClass.GarageNotificationPageTest"/>
+      <class name="TestClass.GaragePartRequestPageTest"/>
+      <class name="TestClass.GarageBidReviewPageTest"/>
+      <class name="TestClass.SupplierDashboardPageTest"/>
+      <class name="TestClass.GarageEditAgentPageTest"/>
+      <class name="TestClass.SupplierEditProfilePageTest"/>
+      <class name="TestClass.SupplierNotificationPageTest"/>
+      <class name="TestClass.SupplierAvailableRequestPageTest"/>
+    </classes>
+  </test> <!-- Regression -->
+</suite> <!-- TradeMartLK Web App -->

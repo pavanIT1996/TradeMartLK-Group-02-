@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="75" passed="73" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-24T08:43:06 IST" name="Default suite" finished-at="2020-11-24T08:43:23 IST" duration-ms="17449">
+  <suite started-at="2020-11-28T13:43:43 IST" name="TradeMartLK Web App" finished-at="2020-11-28T13:49:51 IST" duration-ms="368425">
     <groups>
     </groups>
-    <test started-at="2020-11-24T08:43:06 IST" name="Default test" finished-at="2020-11-24T08:43:23 IST" duration-ms="17449">
-      <class name="TestClass.AvailableRequestPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:06 IST" name="setup" finished-at="2020-11-24T08:43:08 IST" duration-ms="2323" status="PASS">
+    <test started-at="2020-11-28T13:43:43 IST" name="Regression" finished-at="2020-11-28T13:49:51 IST" duration-ms="368425">
+      <class name="TestClass.GarageNotificationPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageNotificationPageTest@44a7bfbc]" started-at="2020-11-28T13:46:39 IST" name="setup" finished-at="2020-11-28T13:46:40 IST" duration-ms="1727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:08 IST" name="verifyvalidlogin" finished-at="2020-11-24T08:43:17 IST" duration-ms="8734" status="PASS">
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageNotificationPageTest@44a7bfbc]" started-at="2020-11-28T13:46:40 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:46:49 IST" duration-ms="9097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyvalidlogin -->
-        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:17 IST" name="verifyclickmakebidbutton" finished-at="2020-11-24T08:43:22 IST" duration-ms="5639" status="PASS">
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageNotificationPageTest@44a7bfbc]" started-at="2020-11-28T13:46:49 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:46:57 IST" duration-ms="7318" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyclickmakebidbutton -->
-        <test-method signature="verifyTitle()[pri:2, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:22 IST" name="verifyTitle" finished-at="2020-11-24T08:43:22 IST" duration-ms="133" status="FAIL">
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GarageNotificationPageTest@44a7bfbc]" started-at="2020-11-28T13:46:57 IST" name="verifyTitle" finished-at="2020-11-28T13:46:57 IST" duration-ms="12" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Title Incorrect expected [THIS IS A MODAL WINDOW] but found [Sparepart Requests]]]>
+              <![CDATA[Title Incorrect expected:<Notification> but was:<Trade Mart | Bid Review>]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Title Incorrect expected [THIS IS A MODAL WINDOW] but found [Sparepart Requests]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at TestClass.AvailableRequestPageTest.verifyTitle(AvailableRequestPageTest.java:17)
+              <![CDATA[java.lang.AssertionError: Title Incorrect expected:<Notification> but was:<Trade Mart | Bid Review>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at TestClass.GarageNotificationPageTest.verifyTitle(GarageNotificationPageTest.java:20)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,15 +62,452 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method signature="verifyPrintButton()[pri:3, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:22 IST" name="verifyPrintButton" finished-at="2020-11-24T08:43:23 IST" duration-ms="420" status="PASS">
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GarageNotificationPageTest@44a7bfbc]" started-at="2020-11-28T13:46:57 IST" name="verifyHeading" finished-at="2020-11-28T13:46:58 IST" duration-ms="1625" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPrintButton -->
-        <test-method signature="verifyRefreshButton()[pri:4, instance:TestClass.AvailableRequestPageTest@3098cf3b]" started-at="2020-11-24T08:43:23 IST" name="verifyRefreshButton" finished-at="2020-11-24T08:43:23 IST" duration-ms="137" status="PASS">
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GarageNotificationPageTest -->
+      <class name="TestClass.GarageEditProfilePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageEditProfilePageTest@2e1d27ba]" started-at="2020-11-28T13:44:54 IST" name="setup" finished-at="2020-11-28T13:44:56 IST" duration-ms="1963" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRefreshButton -->
-      </class> <!-- TestClass.AvailableRequestPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageEditProfilePageTest@2e1d27ba]" started-at="2020-11-28T13:44:56 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:45:04 IST" duration-ms="8291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageEditProfilePageTest@2e1d27ba]" started-at="2020-11-28T13:45:04 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:45:11 IST" duration-ms="7104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GarageEditProfilePageTest@2e1d27ba]" started-at="2020-11-28T13:45:11 IST" name="verifyTitle" finished-at="2020-11-28T13:45:11 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GarageEditProfilePageTest@2e1d27ba]" started-at="2020-11-28T13:45:11 IST" name="verifyHeading" finished-at="2020-11-28T13:45:11 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GarageEditProfilePageTest -->
+      <class name="TestClass.GarageBidReviewPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageBidReviewPageTest@776b83cc]" started-at="2020-11-28T13:47:19 IST" name="setup" finished-at="2020-11-28T13:47:22 IST" duration-ms="3179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageBidReviewPageTest@776b83cc]" started-at="2020-11-28T13:47:22 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:47:32 IST" duration-ms="9663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageBidReviewPageTest@776b83cc]" started-at="2020-11-28T13:47:32 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:47:39 IST" duration-ms="7226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GarageBidReviewPageTest@776b83cc]" started-at="2020-11-28T13:47:39 IST" name="verifyTitle" finished-at="2020-11-28T13:47:39 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GarageBidReviewPageTest@776b83cc]" started-at="2020-11-28T13:47:39 IST" name="verifyHeading" finished-at="2020-11-28T13:47:40 IST" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GarageBidReviewPageTest -->
+      <class name="TestClass.GarageDashboardPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:45:58 IST" name="setup" finished-at="2020-11-28T13:46:00 IST" duration-ms="1838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:00 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:46:13 IST" duration-ms="13401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickpartrequestbutton()[pri:1, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:13 IST" name="verifyclickpartrequestbutton" finished-at="2020-11-28T13:46:20 IST" duration-ms="7061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickpartrequestbutton -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:20 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:46:23 IST" duration-ms="2325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyclickeditagent()[pri:3, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:23 IST" name="verifyclickeditagent" finished-at="2020-11-28T13:46:25 IST" duration-ms="2785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditagent -->
+        <test-method signature="verifyclickusermanagement()[pri:4, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:25 IST" name="verifyclickusermanagement" finished-at="2020-11-28T13:46:28 IST" duration-ms="2478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickusermanagement -->
+        <test-method signature="verifyclickpartrequest()[pri:5, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:28 IST" name="verifyclickpartrequest" finished-at="2020-11-28T13:46:30 IST" duration-ms="2625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickpartrequest -->
+        <test-method signature="verifyclicknotification()[pri:6, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:30 IST" name="verifyclicknotification" finished-at="2020-11-28T13:46:33 IST" duration-ms="2626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclicknotification -->
+        <test-method signature="verifyclickbidreview()[pri:7, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:33 IST" name="verifyclickbidreview" finished-at="2020-11-28T13:46:36 IST" duration-ms="2942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickbidreview -->
+        <test-method signature="verifyclickpurchase()[pri:8, instance:TestClass.GarageDashboardPageTest@152aa092]" started-at="2020-11-28T13:46:36 IST" name="verifyclickpurchase" finished-at="2020-11-28T13:46:39 IST" duration-ms="2468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickpurchase -->
+      </class> <!-- TestClass.GarageDashboardPageTest -->
+      <class name="TestClass.SupplierEditAgentPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierEditAgentPageTest@2cdd0d4b]" started-at="2020-11-28T13:44:17 IST" name="setup" finished-at="2020-11-28T13:44:19 IST" duration-ms="1408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierEditAgentPageTest@2cdd0d4b]" started-at="2020-11-28T13:44:19 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:44:28 IST" duration-ms="8994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierEditAgentPageTest@2cdd0d4b]" started-at="2020-11-28T13:44:28 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:44:33 IST" duration-ms="5663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierEditAgentPageTest@2cdd0d4b]" started-at="2020-11-28T13:44:33 IST" name="verifyTitle" finished-at="2020-11-28T13:44:34 IST" duration-ms="773" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierEditAgentPageTest@2cdd0d4b]" started-at="2020-11-28T13:44:34 IST" name="verifyHeading" finished-at="2020-11-28T13:44:34 IST" duration-ms="2" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at WebPageClass.BasePage.waitForWebElementToAppear(BasePage.java:26)
+at WebPageClass.SupplierEditAgentPage.getHeading(SupplierEditAgentPage.java:28)
+at TestClass.SupplierEditAgentPageTest.verifyHeading(SupplierEditAgentPageTest.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.SupplierEditAgentPageTest -->
+      <class name="TestClass.GarageEditAgentPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageEditAgentPageTest@4e268090]" started-at="2020-11-28T13:48:15 IST" name="setup" finished-at="2020-11-28T13:48:23 IST" duration-ms="8022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageEditAgentPageTest@4e268090]" started-at="2020-11-28T13:48:23 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:48:34 IST" duration-ms="10511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageEditAgentPageTest@4e268090]" started-at="2020-11-28T13:48:34 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:48:42 IST" duration-ms="7674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GarageEditAgentPageTest@4e268090]" started-at="2020-11-28T13:48:42 IST" name="verifyTitle" finished-at="2020-11-28T13:48:42 IST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GarageEditAgentPageTest@4e268090]" started-at="2020-11-28T13:48:42 IST" name="verifyHeading" finished-at="2020-11-28T13:48:43 IST" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GarageEditAgentPageTest -->
+      <class name="TestClass.SupplierDashboardPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:47:40 IST" name="setup" finished-at="2020-11-28T13:47:42 IST" duration-ms="2021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:47:42 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:47:50 IST" duration-ms="7926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:47:50 IST" name="verifyclickmakebidbutton" finished-at="2020-11-28T13:47:57 IST" duration-ms="6946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickmakebidbutton -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:47:57 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:48:00 IST" duration-ms="2524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyclickeditagent()[pri:3, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:48:00 IST" name="verifyclickeditagent" finished-at="2020-11-28T13:48:03 IST" duration-ms="2947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditagent -->
+        <test-method signature="verifyclickusermanagement()[pri:4, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:48:03 IST" name="verifyclickusermanagement" finished-at="2020-11-28T13:48:06 IST" duration-ms="3594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickusermanagement -->
+        <test-method signature="verifyclickavailaberequest()[pri:5, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:48:06 IST" name="verifyclickavailaberequest" finished-at="2020-11-28T13:48:10 IST" duration-ms="3437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickavailaberequest -->
+        <test-method signature="verifyclicknotification()[pri:6, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:48:10 IST" name="verifyclicknotification" finished-at="2020-11-28T13:48:13 IST" duration-ms="3128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclicknotification -->
+        <test-method signature="verifyclickpurchase()[pri:7, instance:TestClass.SupplierDashboardPageTest@37858383]" started-at="2020-11-28T13:48:13 IST" name="verifyclickpurchase" finished-at="2020-11-28T13:48:15 IST" duration-ms="2701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickpurchase -->
+      </class> <!-- TestClass.SupplierDashboardPageTest -->
+      <class name="TestClass.GarageUserManagementPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageUserManagementPageTest@f381794]" started-at="2020-11-28T13:43:53 IST" name="setup" finished-at="2020-11-28T13:43:55 IST" duration-ms="1760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageUserManagementPageTest@f381794]" started-at="2020-11-28T13:43:55 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:44:09 IST" duration-ms="13838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GarageUserManagementPageTest@f381794]" started-at="2020-11-28T13:44:09 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:44:16 IST" duration-ms="7109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GarageUserManagementPageTest@f381794]" started-at="2020-11-28T13:44:16 IST" name="verifyTitle" finished-at="2020-11-28T13:44:16 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GarageUserManagementPageTest@f381794]" started-at="2020-11-28T13:44:16 IST" name="verifyHeading" finished-at="2020-11-28T13:44:17 IST" duration-ms="956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GarageUserManagementPageTest -->
+      <class name="TestClass.SupplierLoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierLoginPageTest@524d6d96]" started-at="2020-11-28T13:45:47 IST" name="setup" finished-at="2020-11-28T13:45:49 IST" duration-ms="2062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierLoginPageTest@524d6d96]" started-at="2020-11-28T13:45:49 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:45:58 IST" duration-ms="9087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+      </class> <!-- TestClass.SupplierLoginPageTest -->
+      <class name="TestClass.SupplierEditProfilePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierEditProfilePageTest@1bb266b3]" started-at="2020-11-28T13:48:43 IST" name="setup" finished-at="2020-11-28T13:48:44 IST" duration-ms="1810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierEditProfilePageTest@1bb266b3]" started-at="2020-11-28T13:48:44 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:48:56 IST" duration-ms="11728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierEditProfilePageTest@1bb266b3]" started-at="2020-11-28T13:48:56 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:49:04 IST" duration-ms="8170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierEditProfilePageTest@1bb266b3]" started-at="2020-11-28T13:49:04 IST" name="verifyTitle" finished-at="2020-11-28T13:49:04 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierEditProfilePageTest@1bb266b3]" started-at="2020-11-28T13:49:04 IST" name="verifyHeading" finished-at="2020-11-28T13:49:06 IST" duration-ms="1334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.SupplierEditProfilePageTest -->
+      <class name="TestClass.SupplierAvailableRequestPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:26 IST" name="setup" finished-at="2020-11-28T13:49:29 IST" duration-ms="3205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:29 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:49:38 IST" duration-ms="8995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:38 IST" name="verifyclickmakebidbutton" finished-at="2020-11-28T13:49:45 IST" duration-ms="7174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickmakebidbutton -->
+        <test-method signature="verifyclickavailaberequest()[pri:2, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:45 IST" name="verifyclickavailaberequest" finished-at="2020-11-28T13:49:49 IST" duration-ms="3983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickavailaberequest -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:49 IST" name="verifyTitle" finished-at="2020-11-28T13:49:49 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:49 IST" name="verifyHeading" finished-at="2020-11-28T13:49:49 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+        <test-method signature="verifyDefaultSpareDropdown()[pri:6, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:49 IST" name="verifyDefaultSpareDropdown" finished-at="2020-11-28T13:49:49 IST" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultSpareDropdown -->
+        <test-method signature="verifyCountsSpareDropdown()[pri:7, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:49 IST" name="verifyCountsSpareDropdown" finished-at="2020-11-28T13:49:50 IST" duration-ms="343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCountsSpareDropdown -->
+        <test-method signature="verifyValuesSpareDropdown()[pri:8, instance:TestClass.SupplierAvailableRequestPageTest@2beee7ff]" started-at="2020-11-28T13:49:50 IST" name="verifyValuesSpareDropdown" finished-at="2020-11-28T13:49:51 IST" duration-ms="1436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValuesSpareDropdown -->
+      </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
+      <class name="TestClass.SupplierNotificationPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierNotificationPageTest@306cf3ea]" started-at="2020-11-28T13:49:06 IST" name="setup" finished-at="2020-11-28T13:49:08 IST" duration-ms="2482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierNotificationPageTest@306cf3ea]" started-at="2020-11-28T13:49:08 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:49:18 IST" duration-ms="9635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierNotificationPageTest@306cf3ea]" started-at="2020-11-28T13:49:18 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:49:25 IST" duration-ms="6810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierNotificationPageTest@306cf3ea]" started-at="2020-11-28T13:49:25 IST" name="verifyTitle" finished-at="2020-11-28T13:49:25 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierNotificationPageTest@306cf3ea]" started-at="2020-11-28T13:49:25 IST" name="verifyHeading" finished-at="2020-11-28T13:49:26 IST" duration-ms="892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.SupplierNotificationPageTest -->
+      <class name="TestClass.GarageLoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageLoginPageTest@6c779568]" started-at="2020-11-28T13:43:43 IST" name="setup" finished-at="2020-11-28T13:43:45 IST" duration-ms="2525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageLoginPageTest@6c779568]" started-at="2020-11-28T13:43:45 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:43:53 IST" duration-ms="8258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+      </class> <!-- TestClass.GarageLoginPageTest -->
+      <class name="TestClass.GaragePartRequestPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GaragePartRequestPageTest@4ef37659]" started-at="2020-11-28T13:46:58 IST" name="setup" finished-at="2020-11-28T13:47:01 IST" duration-ms="2592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GaragePartRequestPageTest@4ef37659]" started-at="2020-11-28T13:47:01 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:47:11 IST" duration-ms="10182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GaragePartRequestPageTest@4ef37659]" started-at="2020-11-28T13:47:11 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:47:18 IST" duration-ms="6891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GaragePartRequestPageTest@4ef37659]" started-at="2020-11-28T13:47:18 IST" name="verifyTitle" finished-at="2020-11-28T13:47:18 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GaragePartRequestPageTest@4ef37659]" started-at="2020-11-28T13:47:18 IST" name="verifyHeading" finished-at="2020-11-28T13:47:19 IST" duration-ms="1218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GaragePartRequestPageTest -->
+      <class name="TestClass.SupplierPurchaseOrderPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierPurchaseOrderPageTest@61d6015a]" started-at="2020-11-28T13:45:11 IST" name="setup" finished-at="2020-11-28T13:45:13 IST" duration-ms="1456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierPurchaseOrderPageTest@61d6015a]" started-at="2020-11-28T13:45:13 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:45:21 IST" duration-ms="8624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierPurchaseOrderPageTest@61d6015a]" started-at="2020-11-28T13:45:21 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:45:27 IST" duration-ms="5917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierPurchaseOrderPageTest@61d6015a]" started-at="2020-11-28T13:45:27 IST" name="verifyTitle" finished-at="2020-11-28T13:45:27 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierPurchaseOrderPageTest@61d6015a]" started-at="2020-11-28T13:45:27 IST" name="verifyHeading" finished-at="2020-11-28T13:45:28 IST" duration-ms="921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.SupplierPurchaseOrderPageTest -->
+      <class name="TestClass.SupplierUserManagementPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierUserManagementPageTest@7e9131d5]" started-at="2020-11-28T13:44:34 IST" name="setup" finished-at="2020-11-28T13:44:35 IST" duration-ms="1405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierUserManagementPageTest@7e9131d5]" started-at="2020-11-28T13:44:35 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:44:47 IST" duration-ms="11236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.SupplierUserManagementPageTest@7e9131d5]" started-at="2020-11-28T13:44:47 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:44:53 IST" duration-ms="6183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierUserManagementPageTest@7e9131d5]" started-at="2020-11-28T13:44:53 IST" name="verifyTitle" finished-at="2020-11-28T13:44:53 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierUserManagementPageTest@7e9131d5]" started-at="2020-11-28T13:44:53 IST" name="verifyHeading" finished-at="2020-11-28T13:44:54 IST" duration-ms="847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.SupplierUserManagementPageTest -->
+      <class name="TestClass.GaragePurchaseOrderPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GaragePurchaseOrderPageTest@2525ff7e]" started-at="2020-11-28T13:45:28 IST" name="setup" finished-at="2020-11-28T13:45:30 IST" duration-ms="1460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GaragePurchaseOrderPageTest@2525ff7e]" started-at="2020-11-28T13:45:30 IST" name="verifyvalidlogin" finished-at="2020-11-28T13:45:38 IST" duration-ms="8210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyvalidlogin -->
+        <test-method signature="verifyclickeditprofile()[pri:2, instance:TestClass.GaragePurchaseOrderPageTest@2525ff7e]" started-at="2020-11-28T13:45:38 IST" name="verifyclickeditprofile" finished-at="2020-11-28T13:45:45 IST" duration-ms="7595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickeditprofile -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.GaragePurchaseOrderPageTest@2525ff7e]" started-at="2020-11-28T13:45:45 IST" name="verifyTitle" finished-at="2020-11-28T13:45:45 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.GaragePurchaseOrderPageTest@2525ff7e]" started-at="2020-11-28T13:45:45 IST" name="verifyHeading" finished-at="2020-11-28T13:45:47 IST" duration-ms="1404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+      </class> <!-- TestClass.GaragePurchaseOrderPageTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- TradeMartLK Web App -->
 </testng-results>

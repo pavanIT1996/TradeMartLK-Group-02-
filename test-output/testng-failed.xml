@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [TradeMartLK Web App]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
     <classes>
-      <class name="TestClass.AvailableRequestPageTest">
+      <class name="TestClass.SupplierEditAgentPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierEditAgentPageTest -->
+      <class name="TestClass.GarageNotificationPageTest">
         <methods>
           <include name="verifyTitle"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestClass.AvailableRequestPageTest -->
+      </class> <!-- TestClass.GarageNotificationPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [TradeMartLK Web App] -->
