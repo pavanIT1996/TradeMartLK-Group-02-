@@ -48,11 +48,21 @@ public class GarageDashboardPage {
 	WebElement purchaseorders;
 	
 	
-	public SupplierAvailableRequestPage clickpartrequest() {
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div/div[3]/h3")
+	WebElement heading;
+	
+	
+	public GaragePartRequestPage clickPartRequestButton() {
 		page.waitForWebElementToAppear(partrequestbutton);
 		partrequestbutton.click();
-		return new SupplierAvailableRequestPage(PageClassWebDriver);
+		return new GaragePartRequestPage(PageClassWebDriver);
 	}
+	
+	public String getheading() {
+		page.waitForWebElementToAppear(heading);
+		return heading.getText();
+	}
+
 	
 	public void clickreference() {
 		page.waitForWebElementToAppear(reference);
