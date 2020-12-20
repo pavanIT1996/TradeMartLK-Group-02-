@@ -1,21 +1,466 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="52" passed="46" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-06T12:40:26 IST" name="Default suite" finished-at="2020-12-06T12:40:37 IST" duration-ms="10883">
+  <suite started-at="2020-12-20T14:14:49 IST" name="Default suite" finished-at="2020-12-20T14:16:33 IST" duration-ms="104611">
     <groups>
     </groups>
-    <test started-at="2020-12-06T12:40:26 IST" name="Default test" finished-at="2020-12-06T12:40:37 IST" duration-ms="10883">
-      <class name="TestClass.GarageLoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.GarageLoginPageTest@574b560f]" started-at="2020-12-06T12:40:26 IST" name="setup" finished-at="2020-12-06T12:40:29 IST" duration-ms="2265" status="PASS">
+    <test started-at="2020-12-20T14:14:49 IST" name="Default test" finished-at="2020-12-20T14:16:33 IST" duration-ms="104611">
+      <class name="TestClass.SupplierAvailableRequestPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:14:49 IST" name="setup" finished-at="2020-12-20T14:14:52 IST" duration-ms="3907" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.GarageLoginPageTest@574b560f]" started-at="2020-12-06T12:40:29 IST" name="verifyvalidlogin" finished-at="2020-12-06T12:40:37 IST" duration-ms="8573" status="PASS">
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:14:52 IST" name="verifyvalidlogin" finished-at="2020-12-20T14:15:01 IST" duration-ms="8843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyvalidlogin -->
-      </class> <!-- TestClass.GarageLoginPageTest -->
+        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:01 IST" name="verifyclickmakebidbutton" description="Verify Make Bid Button" finished-at="2020-12-20T14:15:08 IST" duration-ms="6432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickmakebidbutton -->
+        <test-method signature="verifyTitle()[pri:3, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:08 IST" name="verifyTitle" description="Verify Available Request Page Title" finished-at="2020-12-20T14:15:08 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="verifyHeading()[pri:4, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:08 IST" name="verifyHeading" description="Verify Available Request Page Heading" finished-at="2020-12-20T14:15:08 IST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+        <test-method signature="verifySparePartLabel()[pri:5, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:08 IST" name="verifySparePartLabel" description="Verify Spare Part Dropdown Label" finished-at="2020-12-20T14:15:09 IST" duration-ms="687" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sparepart Type] but found [Sparpart Type]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sparepart Type] but found [Sparpart Type]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at TestClass.SupplierAvailableRequestPageTest.verifySparePartLabel(SupplierAvailableRequestPageTest.java:70)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySparePartLabel -->
+        <test-method signature="verifyDefaultSparePartDropdown()[pri:6, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:09 IST" name="verifyDefaultSparePartDropdown" description="Verify Spare Part Default Dropdown Value" finished-at="2020-12-20T14:15:09 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultSparePartDropdown -->
+        <test-method signature="verifyCountsSparePartDropdown()[pri:7, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:09 IST" name="verifyCountsSparePartDropdown" description="Verify Spare Part Dropdown Values count" finished-at="2020-12-20T14:15:09 IST" duration-ms="397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCountsSparePartDropdown -->
+        <test-method signature="verifySparePartValues()[pri:8, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:09 IST" name="verifySparePartValues" description="Verify Spare Part Dropdown Values names" finished-at="2020-12-20T14:15:13 IST" duration-ms="3673" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Values are not matching with the dropdown list expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Values are not matching with the dropdown list expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at TestClass.SupplierAvailableRequestPageTest.verifySparePartValues(SupplierAvailableRequestPageTest.java:96)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySparePartValues -->
+        <test-method signature="verifyBiddingStatusLabel()[pri:9, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:13 IST" name="verifyBiddingStatusLabel" description="Verify Bidding Status Dropdown Label" finished-at="2020-12-20T14:15:13 IST" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBiddingStatusLabel -->
+        <test-method signature="verifySparePartSelect()[pri:9, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:13 IST" name="verifySparePartSelect" description="Verify select value from Spare Part Dropdown" finished-at="2020-12-20T14:15:20 IST" duration-ms="6528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySparePartSelect -->
+        <test-method signature="verifyDefaultBiddingStatusDropdown()[pri:10, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:20 IST" name="verifyDefaultBiddingStatusDropdown" description="Verify Bidding Status Default Dropdown Value" finished-at="2020-12-20T14:15:20 IST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultBiddingStatusDropdown -->
+        <test-method signature="verifyCountsBiddingStatusDropdown()[pri:11, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:20 IST" name="verifyCountsBiddingStatusDropdown" description="Verify Bidding Status Dropdown Values count" finished-at="2020-12-20T14:15:20 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCountsBiddingStatusDropdown -->
+        <test-method signature="verifyBiddingStatusValues()[pri:12, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:20 IST" name="verifyBiddingStatusValues" description="Verify Bidding Status Dropdown Values names" finished-at="2020-12-20T14:15:20 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBiddingStatusValues -->
+        <test-method signature="verifyBiddingStatusSelect()[pri:13, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:20 IST" name="verifyBiddingStatusSelect" description="Verify select value from Bidding Status Dropdown" finished-at="2020-12-20T14:15:26 IST" duration-ms="6394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBiddingStatusSelect -->
+        <test-method signature="verifyWinningStatusLabel()[pri:13, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:26 IST" name="verifyWinningStatusLabel" description="Verify Winning Status Dropdown Label" finished-at="2020-12-20T14:15:27 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWinningStatusLabel -->
+        <test-method signature="verifyDefaultWinningStatusDropdown()[pri:14, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:27 IST" name="verifyDefaultWinningStatusDropdown" description="Verify Winning Status Default Dropdown Value" finished-at="2020-12-20T14:15:27 IST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultWinningStatusDropdown -->
+        <test-method signature="verifyCountsWinningStatusDropdown()[pri:15, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:27 IST" name="verifyCountsWinningStatusDropdown" description="Verify Winning Status Dropdown Values counts" finished-at="2020-12-20T14:15:27 IST" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCountsWinningStatusDropdown -->
+        <test-method signature="verifyWinningStatusValues()[pri:16, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:27 IST" name="verifyWinningStatusValues" description="Verify Winning Status Dropdown Values names" finished-at="2020-12-20T14:15:27 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWinningStatusValues -->
+        <test-method signature="verifyBiddingDateLabel()[pri:17, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:27 IST" name="verifyBiddingDateLabel" description="Verify Bidding Date Dropdown Label" finished-at="2020-12-20T14:15:27 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBiddingDateLabel -->
+        <test-method signature="verifyWinningStatusSelect()[pri:17, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:27 IST" name="verifyWinningStatusSelect" description="Verify select value from Winning Status Dropdown" finished-at="2020-12-20T14:15:33 IST" duration-ms="6409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWinningStatusSelect -->
+        <test-method signature="verifyDefaultBiddingDateDropdown()[pri:18, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:33 IST" name="verifyDefaultBiddingDateDropdown" description="Verify Bidding Date Default Dropdown Value" finished-at="2020-12-20T14:15:34 IST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultBiddingDateDropdown -->
+        <test-method signature="verifyShowEntriesLabel()[pri:19, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:34 IST" name="verifyShowEntriesLabel" description="Verify Show Entries Dropdown Label" finished-at="2020-12-20T14:15:34 IST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowEntriesLabel -->
+        <test-method signature="verifyDefaultShowEntriesDropdown()[pri:20, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:34 IST" name="verifyDefaultShowEntriesDropdown" description="Verify Show Entries Default Dropdown Value" finished-at="2020-12-20T14:15:34 IST" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultShowEntriesDropdown -->
+        <test-method signature="verifyCountsShowEntriesDropdown()[pri:21, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:34 IST" name="verifyCountsShowEntriesDropdown" description="Verify Show Entries Dropdown Values counts" finished-at="2020-12-20T14:15:34 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCountsShowEntriesDropdown -->
+        <test-method signature="verifyShowEntriesValues()[pri:22, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:34 IST" name="verifyShowEntriesValues" description="Verify Show Entries Dropdown Values names" finished-at="2020-12-20T14:15:34 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowEntriesValues -->
+        <test-method signature="verifShowEntriesSelect()[pri:23, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:34 IST" name="verifShowEntriesSelect" description="Verify select value from Show Entries Dropdown" finished-at="2020-12-20T14:15:41 IST" duration-ms="6439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifShowEntriesSelect -->
+        <test-method signature="verifySearchLabel()[pri:23, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:41 IST" name="verifySearchLabel" description="Verify Search Label" finished-at="2020-12-20T14:15:41 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchLabel -->
+        <test-method signature="verifyDefaultSearch()[pri:24, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:41 IST" name="verifyDefaultSearch" description="Verify Search box deafult value" finished-at="2020-12-20T14:15:41 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultSearch -->
+        <test-method signature="verifyColumnDate()[pri:25, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:41 IST" name="verifyColumnDate" description="Verify Top Column Date Label" finished-at="2020-12-20T14:15:41 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnDate -->
+        <test-method signature="verifyInputSearch()[pri:25, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:15:41 IST" name="verifyInputSearch" description="Verify Input in Search box" finished-at="2020-12-20T14:16:31 IST" duration-ms="50319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInputSearch -->
+        <test-method signature="verifyColumnCode()[pri:26, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:31 IST" name="verifyColumnCode" description="Verify Top Column Code Label" finished-at="2020-12-20T14:16:31 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnCode -->
+        <test-method signature="verifyColumnBiddingStarts()[pri:27, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:31 IST" name="verifyColumnBiddingStarts" description="Verify Top Column Bidding Starts Label" finished-at="2020-12-20T14:16:31 IST" duration-ms="68" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Column name is Incorrect expected:<Bidding Starts> but was:<Bidding Starts(ed)>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Column name is Incorrect expected:<Bidding Starts> but was:<Bidding Starts(ed)>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingStarts(SupplierAvailableRequestPageTest.java:325)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnBiddingStarts -->
+        <test-method signature="verifyColumnBiddingEnds()[pri:28, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:31 IST" name="verifyColumnBiddingEnds" description="Verify Top Column Bidding Ends Label" finished-at="2020-12-20T14:16:31 IST" duration-ms="74" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Column name is Incorrect expected:<Bidding Ends> but was:<Bidding Ends(ed)>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Column name is Incorrect expected:<Bidding Ends> but was:<Bidding Ends(ed)>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingEnds(SupplierAvailableRequestPageTest.java:332)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnBiddingEnds -->
+        <test-method signature="verifyColumnSparePart()[pri:29, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:31 IST" name="verifyColumnSparePart" description="Verify Top Column Spare Part Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="71" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnSparePart -->
+        <test-method signature="verifyColumnStatus()[pri:30, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnStatus" description="Verify Top Column Status Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnStatus -->
+        <test-method signature="verifyColumnFDate()[pri:31, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFDate" description="Verify Bottom Column Date Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFDate -->
+        <test-method signature="verifyColumnFCode()[pri:32, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFCode" description="Verify Bottom Column Code Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFCode -->
+        <test-method signature="verifyColumnFBiddingStarts()[pri:33, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFBiddingStarts" description="Verify Bottom Column Bidding Starts Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="69" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Column name is Incorrect expected:<Bidding Starts> but was:<Bidding Starts(ed)>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Column name is Incorrect expected:<Bidding Starts> but was:<Bidding Starts(ed)>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingStarts(SupplierAvailableRequestPageTest.java:369)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFBiddingStarts -->
+        <test-method signature="verifyColumnFBiddingEnds()[pri:34, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFBiddingEnds" description="Verify Bottom Column Bidding Ends Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="71" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Column name is Incorrect expected:<Bidding Ends> but was:<Bidding Ends(ed)>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Column name is Incorrect expected:<Bidding Ends> but was:<Bidding Ends(ed)>
+at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingEnds(SupplierAvailableRequestPageTest.java:376)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFBiddingEnds -->
+        <test-method signature="verifyColumnFSparePart()[pri:35, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFSparePart" description="Verify Bottom Column Spare Part Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFSparePart -->
+        <test-method signature="verifyColumnFStatus()[pri:36, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyColumnFStatus" description="Verify Bottom Column Status Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyColumnFStatus -->
+        <test-method signature="verifyShowingLabel()[pri:37, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingLabel" description="Verify Showing Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingLabel -->
+        <test-method signature="verifyShowingPaginationPreviousLabel()[pri:38, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingPaginationPreviousLabel" description="Verify showing pagination previous Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingPaginationPreviousLabel -->
+        <test-method signature="verifyShowingPaginationFirstLabel()[pri:39, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingPaginationFirstLabel" description="Verify showing pagination First Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingPaginationFirstLabel -->
+        <test-method signature="verifyShowingPaginationSecondLabel()[pri:40, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingPaginationSecondLabel" description="Verify showing pagination Second Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingPaginationSecondLabel -->
+        <test-method signature="verifyShowingPaginationThirdLabel()[pri:41, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingPaginationThirdLabel" description="Verify showing pagination Third Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingPaginationThirdLabel -->
+        <test-method signature="verifyShowingPaginationNextLabel()[pri:42, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyShowingPaginationNextLabel" description="Verify showing pagination next Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowingPaginationNextLabel -->
+        <test-method signature="verifyrequestInformationTabLabel()[pri:43, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifyrequestInformationTabLabel" description="Verify Request information Tab Label" finished-at="2020-12-20T14:16:32 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyrequestInformationTabLabel -->
+        <test-method signature="verifymyBidTabLabel()[pri:44, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:32 IST" name="verifymyBidTabLabel" description="Verify My Bid Tab Label" finished-at="2020-12-20T14:16:33 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifymyBidTabLabel -->
+        <test-method signature="verifyDefaultactiveTab()[pri:45, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:33 IST" name="verifyDefaultactiveTab" description="Verify Default active Tab" finished-at="2020-12-20T14:16:33 IST" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefaultactiveTab -->
+        <test-method signature="verifyclickMyBidTab()[pri:46, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:33 IST" name="verifyclickMyBidTab" description="Verify My Bid Tab click" finished-at="2020-12-20T14:16:33 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickMyBidTab -->
+        <test-method signature="verifyclickRequestInformationTab()[pri:47, instance:TestClass.SupplierAvailableRequestPageTest@29647f75]" started-at="2020-12-20T14:16:33 IST" name="verifyclickRequestInformationTab" description="Verify Request Information Tab click" finished-at="2020-12-20T14:16:33 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickRequestInformationTab -->
+      </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

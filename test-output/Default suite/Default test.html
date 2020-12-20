@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>46/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 06 12:40:26 IST 2020</td>
+<td>Started on:</td><td>Sun Dec 20 14:14:49 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10883 ms)</td>
+<tr><td>Total time:</td><td>104 seconds (104611 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,436 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingEnds()'><b>verifyColumnBiddingEnds</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Bidding Ends Label</td>
+<td><div><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Ends&gt; but was:&lt;Bidding Ends(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingEnds(SupplierAvailableRequestPageTest.java:332)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1183065103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1183065103'><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Ends&gt; but was:&lt;Bidding Ends(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingEnds(SupplierAvailableRequestPageTest.java:332)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingStarts()'><b>verifyColumnBiddingStarts</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Bidding Starts Label</td>
+<td><div><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Starts&gt; but was:&lt;Bidding Starts(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingStarts(SupplierAvailableRequestPageTest.java:325)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1756837032", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1756837032'><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Starts&gt; but was:&lt;Bidding Starts(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnBiddingStarts(SupplierAvailableRequestPageTest.java:325)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingEnds()'><b>verifyColumnFBiddingEnds</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Bidding Ends Label</td>
+<td><div><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Ends&gt; but was:&lt;Bidding Ends(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingEnds(SupplierAvailableRequestPageTest.java:376)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1609565447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1609565447'><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Ends&gt; but was:&lt;Bidding Ends(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingEnds(SupplierAvailableRequestPageTest.java:376)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingStarts()'><b>verifyColumnFBiddingStarts</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Bidding Starts Label</td>
+<td><div><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Starts&gt; but was:&lt;Bidding Starts(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingStarts(SupplierAvailableRequestPageTest.java:369)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1710180594", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1710180594'><pre>java.lang.AssertionError: Column name is Incorrect expected:&lt;Bidding Starts&gt; but was:&lt;Bidding Starts(ed)&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
+	at TestClass.SupplierAvailableRequestPageTest.verifyColumnFBiddingStarts(SupplierAvailableRequestPageTest.java:369)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifySparePartLabel()'><b>verifySparePartLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Spare Part Dropdown Label</td>
+<td><div><pre>java.lang.AssertionError: expected [Sparepart Type] but found [Sparpart Type]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at TestClass.SupplierAvailableRequestPageTest.verifySparePartLabel(SupplierAvailableRequestPageTest.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace397318359", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace397318359'><pre>java.lang.AssertionError: expected [Sparepart Type] but found [Sparpart Type]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at TestClass.SupplierAvailableRequestPageTest.verifySparePartLabel(SupplierAvailableRequestPageTest.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifySparePartValues()'><b>verifySparePartValues</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Spare Part Dropdown Values names</td>
+<td><div><pre>java.lang.AssertionError: Values are not matching with the dropdown list expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at TestClass.SupplierAvailableRequestPageTest.verifySparePartValues(SupplierAvailableRequestPageTest.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace477463877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace477463877'><pre>java.lang.AssertionError: Values are not matching with the dropdown list expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at TestClass.SupplierAvailableRequestPageTest.verifySparePartValues(SupplierAvailableRequestPageTest.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:764)
+	at org.testng.TestRunner.run(TestRunner.java:585)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +505,235 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestClass.GarageLoginPageTest.verifyvalidlogin()'><b>verifyvalidlogin</b><br>Test class: TestClass.GarageLoginPageTest</td>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifShowEntriesSelect()'><b>verifShowEntriesSelect</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify select value from Show Entries Dropdown</td>
+<td></td>
+<td>6</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyBiddingDateLabel()'><b>verifyBiddingDateLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Date Dropdown Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyBiddingStatusLabel()'><b>verifyBiddingStatusLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Status Dropdown Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyBiddingStatusSelect()'><b>verifyBiddingStatusSelect</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify select value from Bidding Status Dropdown</td>
+<td></td>
+<td>6</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyBiddingStatusValues()'><b>verifyBiddingStatusValues</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Status Dropdown Values names</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnCode()'><b>verifyColumnCode</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Code Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnDate()'><b>verifyColumnDate</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Date Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFCode()'><b>verifyColumnFCode</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Code Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFDate()'><b>verifyColumnFDate</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Date Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFSparePart()'><b>verifyColumnFSparePart</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Spare Part Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnFStatus()'><b>verifyColumnFStatus</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bottom Column Status Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnSparePart()'><b>verifyColumnSparePart</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Spare Part Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyColumnStatus()'><b>verifyColumnStatus</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Top Column Status Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyCountsBiddingStatusDropdown()'><b>verifyCountsBiddingStatusDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Status Dropdown Values count</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyCountsShowEntriesDropdown()'><b>verifyCountsShowEntriesDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Show Entries Dropdown Values counts</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyCountsSparePartDropdown()'><b>verifyCountsSparePartDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Spare Part Dropdown Values count</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyCountsWinningStatusDropdown()'><b>verifyCountsWinningStatusDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Winning Status Dropdown Values counts</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultBiddingDateDropdown()'><b>verifyDefaultBiddingDateDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Date Default Dropdown Value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultBiddingStatusDropdown()'><b>verifyDefaultBiddingStatusDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Bidding Status Default Dropdown Value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultSearch()'><b>verifyDefaultSearch</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Search box deafult value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultShowEntriesDropdown()'><b>verifyDefaultShowEntriesDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Show Entries Default Dropdown Value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultSparePartDropdown()'><b>verifyDefaultSparePartDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Spare Part Default Dropdown Value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultWinningStatusDropdown()'><b>verifyDefaultWinningStatusDropdown</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Winning Status Default Dropdown Value</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyDefaultactiveTab()'><b>verifyDefaultactiveTab</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Default active Tab</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyHeading()'><b>verifyHeading</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Available Request Page Heading</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyInputSearch()'><b>verifyInputSearch</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Input in Search box</td>
+<td></td>
+<td>50</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifySearchLabel()'><b>verifySearchLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Search Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowEntriesLabel()'><b>verifyShowEntriesLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Show Entries Dropdown Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowEntriesValues()'><b>verifyShowEntriesValues</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Show Entries Dropdown Values names</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingLabel()'><b>verifyShowingLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Showing Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingPaginationFirstLabel()'><b>verifyShowingPaginationFirstLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify showing pagination First Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingPaginationNextLabel()'><b>verifyShowingPaginationNextLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify showing pagination next Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingPaginationPreviousLabel()'><b>verifyShowingPaginationPreviousLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify showing pagination previous Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingPaginationSecondLabel()'><b>verifyShowingPaginationSecondLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify showing pagination Second Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyShowingPaginationThirdLabel()'><b>verifyShowingPaginationThirdLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify showing pagination Third Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifySparePartSelect()'><b>verifySparePartSelect</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify select value from Spare Part Dropdown</td>
+<td></td>
+<td>6</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyTitle()'><b>verifyTitle</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Available Request Page Title</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyWinningStatusLabel()'><b>verifyWinningStatusLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Winning Status Dropdown Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyWinningStatusSelect()'><b>verifyWinningStatusSelect</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify select value from Winning Status Dropdown</td>
+<td></td>
+<td>6</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyWinningStatusValues()'><b>verifyWinningStatusValues</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Winning Status Dropdown Values names</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyclickMyBidTab()'><b>verifyclickMyBidTab</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify My Bid Tab click</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyclickRequestInformationTab()'><b>verifyclickRequestInformationTab</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Request Information Tab click</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyclickmakebidbutton()'><b>verifyclickmakebidbutton</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Make Bid Button</td>
+<td></td>
+<td>6</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifymyBidTabLabel()'><b>verifymyBidTabLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify My Bid Tab Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyrequestInformationTabLabel()'><b>verifyrequestInformationTabLabel</b><br>Test class: TestClass.SupplierAvailableRequestPageTest<br>Test method: Verify Request information Tab Label</td>
+<td></td>
+<td>0</td>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
+<tr>
+<td title='TestClass.SupplierAvailableRequestPageTest.verifyvalidlogin()'><b>verifyvalidlogin</b><br>Test class: TestClass.SupplierAvailableRequestPageTest</td>
 <td></td>
 <td>8</td>
-<td>TestClass.GarageLoginPageTest@574b560f</td></tr>
+<td>TestClass.SupplierAvailableRequestPageTest@29647f75</td></tr>
 </table><p>
 </body>
 </html>

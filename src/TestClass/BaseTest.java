@@ -1,11 +1,9 @@
 package TestClass;
 
-import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import WebPageClass.GarageLoginPage;
-import WebPageClass.SupplierDashboardPage;
 import WebPageClass.SupplierLoginPage;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +15,7 @@ public class BaseTest {
 	protected WebDriver driver;
     private Capabilities caps;
     
-    private String path="C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\LibraryFiles\\ChromeDriver\\chromedriverV86.exe";
+    private String path="C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\LibraryFiles\\ChromeDriver\\chromedriverV87.exe";
     
     SupplierLoginPage objSupLogin;
     GarageLoginPage objGarLogin;

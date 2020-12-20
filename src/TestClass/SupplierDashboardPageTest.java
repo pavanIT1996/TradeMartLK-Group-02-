@@ -1,61 +1,55 @@
 package TestClass;
 
-import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import WebPageClass.SupplierAvailableRequestPage;
-import WebPageClass.SupplierDashboardPage;
-import WebPageClass.SupplierLoginPage;
+
 
 public class SupplierDashboardPageTest extends SupplierLoginPageTest {
 
 	SupplierAvailableRequestPage objAvialablePage;
 
-	@Test(priority = 1)
+	
+	@Test(priority = 1, description="Verify Available Request Page Title")
+	public void verifyTitle() {
+		String actualTitle = objHomePage.getTitle();
+		String expectedTitle = "SQA Supplier G2";
+		AssertJUnit.assertEquals("Title Incorrect", expectedTitle, actualTitle);
+	}
+	
+	@Test(priority = 2, description="Verify Make Bid Button")
 	public void verifyclickmakebidbutton() {
 		objAvialablePage=objHomePage.clickmakebid();
-//		driver.quit();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3, description="Verify click edit profile link")
 	public void verifyclickeditprofile() {
 		objHomePage.clickEditProfilePage();
-//		driver.quit();
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 4, description="Verify click edit agent link")
 	public void verifyclickeditagent() {
 		objHomePage.clickEditAgentPage();
-//		driver.quit();
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5, description="Verify click user management link")
 	public void verifyclickusermanagement() {
 		objHomePage.clickUserManagementPage();
-//		driver.quit();
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 6, description="Verify click available request link")
 	public void verifyclickavailaberequest() {
 		objHomePage.clickAvilableRequestPage();
-//		driver.quit();
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 7, description="Verify click notification link")
 	public void verifyclicknotification() {
 		objHomePage.clickNotificationPage();
-//		driver.quit();
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 8, description="Verify click purchase link")
 	public void verifyclickpurchase() {
 		objHomePage.clickPurchasePage();
-		driver.quit();
 	}
 }

@@ -7,8 +7,6 @@
         <methods>
           <include name="verifySparePartLabel"/>
           <include name="verifySparePartValues"/>
-          <include name="verifyShowingLabel"/>
-          <include name="verifyDefaultBiddingDateDropdown"/>
           <include name="verifyColumnFBiddingStarts"/>
           <include name="verifyColumnBiddingStarts"/>
           <include name="verifyColumnFBiddingEnds"/>
