@@ -6,12 +6,20 @@
       <class name="TestClass.SupplierAvailableRequestPageTest">
         <methods>
           <include name="verifySparePartLabel"/>
+          <include name="driverquit"/>
           <include name="verifySparePartValues"/>
           <include name="verifyColumnFBiddingStarts"/>
+          <include name="verifyColumnSparePartDescending"/>
           <include name="verifyColumnBiddingStarts"/>
+          <include name="setup"/>
+          <include name="verifyShowingPaginationThirdLabel"/>
+          <include name="verifyShowingLabel"/>
+          <include name="verifyShowingPaginationSecondLabel"/>
+          <include name="verifyColumnSparePartsAscending"/>
+          <include name="verifySparePartWithTable"/>
           <include name="verifyColumnFBiddingEnds"/>
           <include name="verifyColumnBiddingEnds"/>
-          <include name="setup"/>
+          <include name="verifyWinningStatusWithTable"/>
         </methods>
       </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
     </classes>

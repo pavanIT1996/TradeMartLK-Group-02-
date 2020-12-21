@@ -4,8 +4,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,18 +20,23 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.AssertJUnit;
 
 import UtilityClass.DropDownUtilityClass;
 import UtilityClass.ExcelUtilityClass;
 
-public class SupplierAvailableRequestPage  {
+public class SupplierAvailableRequestPage {
 
 	BasePage page;
 	Actions action;
 
 	WebDriver PageClassWebDriver;
-	ExcelUtilityClass Excel=new ExcelUtilityClass();
-	
+	ExcelUtilityClass Excel = new ExcelUtilityClass();
+
+	List<WebElement> endstatusrows = new ArrayList<>();
+	List<WebElement> startedstatusrows = new ArrayList<>();
+	List<WebElement> allrows = new ArrayList<>();
+
 	public SupplierAvailableRequestPage(WebDriver TestClassParameterDriver) {
 		this.PageClassWebDriver = TestClassParameterDriver;
 		PageFactory.initElements(TestClassParameterDriver, this);
@@ -131,7 +140,7 @@ public class SupplierAvailableRequestPage  {
 
 	// initialize pagination option
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_previous\"]/a")
+	@FindBy(how = How.ID, using = "crud-main-datatable_previous")
 	WebElement paginationPreviousLabel;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_paginate\"]/ul/li[2]/a")
@@ -143,7 +152,7 @@ public class SupplierAvailableRequestPage  {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_paginate\"]/ul/li[4]/a")
 	WebElement paginationThirdLabel;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_next\"]/a")
+	@FindBy(how = How.ID, using = "crud-main-datatable_next")
 	WebElement paginationNextLabel;
 
 	// initialize tabs
@@ -155,11 +164,9 @@ public class SupplierAvailableRequestPage  {
 	WebElement myBidTab;
 
 	// linitialize row of table
-	
-	
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable\"]/tbody")
 	WebElement tablebody;
-	
 
 	// initialize methods
 
@@ -233,13 +240,13 @@ public class SupplierAvailableRequestPage  {
 		page.waitForWebElementToAppear(biddingdateDropDown);
 		return biddingdateDropDown.getText();
 	}
-	
+
 	public String getCurrentDateAndTime() {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");  
-		LocalDateTime now = LocalDateTime.now();  
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		LocalDateTime now = LocalDateTime.now();
 		LocalDateTime lastmonth = now.minusDays(29);
-		String Full=dtf.format(lastmonth)+" - "+dtf.format(now);
-		return Full;   
+		String Full = dtf.format(lastmonth) + " - " + dtf.format(now);
+		return Full;
 	}
 
 	// initialize show entries dropdown methods
@@ -268,22 +275,68 @@ public class SupplierAvailableRequestPage  {
 		page.waitForWebElementToAppear(searchInput);
 		return searchInput.getText();
 	}
-	
+
 	public void insertSearch(String value) {
 		page.waitForWebElementToAppear(searchInput);
 		searchInput.sendKeys(value);
 	}
-	
-	public void cleansearch(){
+
+	public void cleansearch() {
 		searchInput.sendKeys(Keys.CONTROL + "a");
 		searchInput.sendKeys(Keys.DELETE);
 	}
 
 	// initialize table column label methods
 
+	public List<String> GetActualList(int index) {
+		List<WebElement> List = new ArrayList<>();
+		Select100fromShowEntries();
+		List = AllTableRows();
+		List<String> ValueSet = new ArrayList<>();
+		for (WebElement Value : List) {
+			String text = RowElements(Value);
+			String arr[] = text.toString().split(", ");
+			ValueSet.add(arr[index]);
+		}
+		return ValueSet;
+	}
+
+	public List<String> GetExpectedList(int index, String Type) {
+		List<String> ValueSet = new ArrayList<>();
+		ValueSet = GetActualList(index);
+		if (Type.equals("descending")) {
+			ValueSet.sort(Comparator.reverseOrder());
+		} else {
+			ValueSet.sort(Comparator.naturalOrder());
+		}
+		return ValueSet;
+	}
+
+	public boolean compareList(List<String> expectedList, List<String> actualList) {
+		if (expectedList.equals(actualList)) {
+			System.out.println("Actual List : " + actualList.toString());
+			System.out.println("Expected List : " + expectedList.toString());
+			System.out.println("Value : " + expectedList.equals(actualList));
+			return true;
+		} else {
+			System.out.println("Actual List : " + actualList.toString());
+			System.out.println("Expected List : " + expectedList.toString());
+			System.out.println("Value : " + expectedList.equals(actualList));
+			return false;
+		}
+
+	}
+
 	public String getColumnDate() {
 		page.waitForWebElementToAppear(columnDate);
 		return columnDate.getText();
+	}
+
+	public String clickColumnDate() {
+		page.waitForWebElementToAppear(columnDate);
+		columnDate.click();
+		String label = columnDate.getAttribute("aria-sort");
+		return label;
 	}
 
 	public String getColumnCode() {
@@ -291,9 +344,23 @@ public class SupplierAvailableRequestPage  {
 		return columnCode.getText();
 	}
 
+	public String clickColumnCode() {
+		page.waitForWebElementToAppear(columnCode);
+		columnCode.click();
+		String label = columnCode.getAttribute("aria-sort");
+		return label;
+	}
+
 	public String getColumnBiddingStarts() {
 		page.waitForWebElementToAppear(columnBiddingStarts);
 		return columnBiddingStarts.getText();
+	}
+
+	public String clickColumnBiddingStarts() {
+		page.waitForWebElementToAppear(columnBiddingStarts);
+		columnBiddingStarts.click();
+		String label = columnBiddingStarts.getAttribute("aria-sort");
+		return label;
 	}
 
 	public String getColumnBiddingEnds() {
@@ -301,14 +368,35 @@ public class SupplierAvailableRequestPage  {
 		return columnBiddingEnds.getText();
 	}
 
+	public String clickColumnBiddingEnds() {
+		page.waitForWebElementToAppear(columnBiddingEnds);
+		columnBiddingEnds.click();
+		String label = columnBiddingEnds.getAttribute("aria-sort");
+		return label;
+	}
+
 	public String getColumnSparePart() {
 		page.waitForWebElementToAppear(columnSparePart);
 		return columnSparePart.getText();
 	}
 
+	public String clickColumnSparePart() {
+		page.waitForWebElementToAppear(columnSparePart);
+		columnSparePart.click();
+		String label = columnSparePart.getAttribute("aria-sort");
+		return label;
+	}
+
 	public String getColumnStatus() {
 		page.waitForWebElementToAppear(columnStatus);
 		return columnStatus.getText();
+	}
+
+	public String clickColumnStatus() {
+		page.waitForWebElementToAppear(columnStatus);
+		columnStatus.click();
+		String label = columnStatus.getAttribute("aria-sort");
+		return label;
 	}
 
 	public String getColumnFDate() {
@@ -419,59 +507,47 @@ public class SupplierAvailableRequestPage  {
 		return new RequestInformationTab(PageClassWebDriver);
 	}
 
-	
 	// initialize click row methods
-	
-	
-	List<WebElement> endstatusrows=new ArrayList<>();
-	List<WebElement> startedstatusrows=new ArrayList<>();
-	
-	public String AllTableRows() {
-		Select100fromShowEntries();
+
+	public List<WebElement> AllTableRows() {
 		page.waitForWebElementToAppear(tablebody);
-		List<WebElement> allrows=new ArrayList<>();
-		allrows= tablebody.findElements(By.tagName("tr"));
-	    for(WebElement row: allrows)
-	    {
-	    	String fullrow=row.getText();
-	    	String lastword=fullrow.substring(fullrow.lastIndexOf(" ")+1);
-	    	if(lastword.equals("END")) {
-	    		endstatusrows.add(row);
-	    		System.out.println("End Status rows List : "+row.getText());
-	    	}
-	    	else if(lastword.equals("STARTED")) {
-	    		startedstatusrows.add(row);
-	    		System.out.println("End Status rows List : "+row.getText());
-	    	}
-	    	else {
-	    		System.out.println("Not Equal");
-	    	}
-	    }
-	    return allrows.toString();
+		allrows = tablebody.findElements(By.tagName("tr"));
+		for (WebElement row : allrows) {
+			String fullrow = row.getText();
+			String lastword = fullrow.substring(fullrow.lastIndexOf(" ") + 1);
+			if (lastword.equals("END")) {
+				endstatusrows.add(row);
+				// System.out.println("End Status rows List : " + row.getText());
+			} else if (lastword.equals("STARTED")) {
+				startedstatusrows.add(row);
+				// System.out.println("End Status rows List : " + row.getText());
+			} else {
+				// System.out.println("Not Equal");
+			}
+		}
+		return allrows;
 	}
 
 	public WebElement getRandomRow(List<WebElement> List) {
 		Random rand = new Random();
-		int int_random = rand.nextInt(List.size()); 
-		WebElement value=List.get(int_random);
+		int int_random = rand.nextInt(List.size());
+		WebElement value = List.get(int_random);
+		value.click();
 		return value;
 	}
-	
-	
+
 	public WebElement passRandomEndStatusRow() {
+		Select100fromShowEntries();
 		AllTableRows();
 		return getRandomRow(endstatusrows);
 	}
-	
-	
+
 	public WebElement passRandomStartedStatusRow() {
 		return getRandomRow(startedstatusrows);
 	}
-	
+
 	public String RowElements(WebElement element) {
-		Select100fromShowEntries();
 		page.waitForWebElementToAppear(element);
-		element.click();
 		List<WebElement> columnvalues = element.findElements(By.tagName("td"));
 		List<String> listBooks = new ArrayList<>();
 		for (WebElement webElement : columnvalues) {
@@ -485,10 +561,41 @@ public class SupplierAvailableRequestPage  {
 		DropDownUtilityClass DropDown = new DropDownUtilityClass();
 		DropDown.selectFromDropdown("100", getShowEntriesDropdown());
 	}
-	
-	public void scrolltobottomofpage() {
-		JavascriptExecutor js = (JavascriptExecutor) PageClassWebDriver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+	public boolean CheckTableValuesChanges(String check) {
+		boolean bflag = false;
+		List<WebElement> ExcelValue = new ArrayList<>();
+		ExcelValue = AllTableRows();
+		for (WebElement Value : ExcelValue) {
+			String text = RowElements(Value);
+			bflag = CheckTableValues(text, check);
+		}
+		return bflag;
 	}
-	
+
+	public int RowCounts() {
+		int count = 0;
+		List<WebElement> ExcelValue = new ArrayList<>();
+		ExcelValue = AllTableRows();
+		for (WebElement Value : ExcelValue) {
+			count++;
+		}
+		return count;
+	}
+
+	public boolean CheckTableValues(String row, String checkvalue) {
+		boolean bflag = false;
+		if (row.equals("No matching records found") || row.equals("No data available in table")) {
+			System.out.println("No Matching Records");
+			bflag = true;
+		} else {
+			String arr[] = row.toString().split(", ");
+			for (int i = 0; i <= 5; i++) {
+				if (arr[i].toLowerCase().contains(checkvalue.toLowerCase()))
+					bflag = true;
+			}
+		}
+		return bflag;
+	}
+
 }

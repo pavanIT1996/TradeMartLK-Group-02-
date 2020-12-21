@@ -37,6 +37,7 @@ public class RequestInformationTab {
 	
 	public String getTabHeadingLabel() {
 		page.waitForWebElementToAppear(requestTabHeading);
+		page.scrolldown();
 		return requestTabHeading.getText();
 	}
 	

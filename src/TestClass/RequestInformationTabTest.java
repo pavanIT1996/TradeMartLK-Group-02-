@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.RequestInformationTab;
@@ -25,7 +26,6 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		System.out.println(actualValue);
 		String expectedValue = "Bidding will Start "+arr[0]+" at "+arr[2]+" and end at "+arr[3]+" - "+arr[5];
 		System.out.println(expectedValue.toString());
-		objAvialablePage.scrolltobottomofpage();
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
@@ -38,7 +38,6 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		System.out.println(actualValue);
 		String expectedValue = "Bidding will Start "+arr2[0]+" at "+arr2[2]+" and end at "+arr2[3]+" - "+arr2[5];
 		System.out.println(expectedValue.toString());
-		objAvialablePage.scrolltobottomofpage();
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
@@ -59,5 +58,9 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
+	}
 	
 }

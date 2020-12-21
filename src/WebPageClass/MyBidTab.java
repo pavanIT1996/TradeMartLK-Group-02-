@@ -107,6 +107,7 @@ public class MyBidTab {
 	
 	public String getTabHeadingLabel() {
 		page.waitForWebElementToAppear(mybidTabHeading);
+		page.scrolldown();
 		return mybidTabHeading.getText();
 	}
 	
