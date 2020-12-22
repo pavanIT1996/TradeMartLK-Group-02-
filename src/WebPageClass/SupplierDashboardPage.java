@@ -5,10 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeMethod;
 
 
 public class SupplierDashboardPage {
@@ -51,6 +47,10 @@ public class SupplierDashboardPage {
 	@FindBy(how=How.XPATH,using="//*[@id=\"sidebar-menu\"]/div/ul/li[2]/ul/li[3]/a")
 	WebElement purchaseorder;
 	
+	
+	public String getTitle() {
+		return PageClassWebDriver.getTitle();
+	}
 	
 	public SupplierAvailableRequestPage clickmakebid() {
 		page.waitForWebElementToAppear(makebidbutton);
