@@ -3,25 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestClass.SupplierAvailableRequestPageTest">
+      <class name="TestClass.MyBidTabTest">
         <methods>
-          <include name="verifySparePartLabel"/>
-          <include name="driverquit"/>
-          <include name="verifySparePartValues"/>
-          <include name="verifyColumnFBiddingStarts"/>
-          <include name="verifyColumnSparePartDescending"/>
-          <include name="verifyColumnBiddingStarts"/>
+          <include name="verifyconfirmationboxCancelbuttonLable"/>
+          <include name="verifyconfirmationboxTitle"/>
+          <include name="verifyconfirmationboxOkbuttonLable"/>
+          <include name="verifyinputs"/>
+          <include name="verifyconfirmationboxDescription"/>
+          <include name="verifyclickStartedStatusRow"/>
           <include name="setup"/>
-          <include name="verifyShowingPaginationThirdLabel"/>
-          <include name="verifyShowingLabel"/>
-          <include name="verifyShowingPaginationSecondLabel"/>
-          <include name="verifyColumnSparePartsAscending"/>
-          <include name="verifySparePartWithTable"/>
-          <include name="verifyColumnFBiddingEnds"/>
-          <include name="verifyColumnBiddingEnds"/>
-          <include name="verifyWinningStatusWithTable"/>
         </methods>
-      </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
+      </class> <!-- TestClass.MyBidTabTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

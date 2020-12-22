@@ -655,9 +655,9 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-	@AfterTest
-	public void driverquit() {
-		driver.quit();
-	}
-	
+//	@AfterTest
+//	public void driverquit() {
+//		driver.quit();
+//	}
+//	
 }
