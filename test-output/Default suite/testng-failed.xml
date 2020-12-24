@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestClass.BiddingDateDropdownTest">
+      <class name="TestClass.RequestInformationTabTest">
         <methods>
-          <include name="verifySubmitButtonClick"/>
-          <include name="verifyCustomButtonClick"/>
+          <include name="verifypartDescriptionEnd"/>
+          <include name="verifydescriptionLabel"/>
+          <include name="verifypartNameEnd"/>
+          <include name="verifypartDescriptionStarted"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestClass.BiddingDateDropdownTest -->
+      </class> <!-- TestClass.RequestInformationTabTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
