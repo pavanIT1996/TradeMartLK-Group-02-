@@ -61,8 +61,5 @@ public class ExcelUtilityClass {
 	public String getDropdownExcelPath() {
 		return "C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\Attachments\\ExcelFiles\\TradeMartLK-DropDownValues.xlsx";
 	}
-	
-	public String getInputExcelPath() {
-		return "C:\\Users\\Pavan\\Desktop\\SQA-Assignment\\TradeMartLK-InputValues.xlsx";
-	}
+
 }

@@ -11,6 +11,8 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 
 	SupplierAvailableRequestPage objAvialablePage;
 	RequestInformationTab objRequestInformationTab;
+	String values;
+	String values2;
 	
 	@Test(priority = 1, description="Verify Make Bid Button")
 	public void verifyclickmakebidbutton() {
@@ -19,7 +21,7 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 	
 	@Test(priority = 2, description="Verify End status random row from the table")
 	public void verifyclickEndStatusRowDetails() {
-		String values=objAvialablePage.RowElements(objAvialablePage.passRandomEndStatusRow());
+		values=objAvialablePage.RowElements(objAvialablePage.passRandomEndStatusRow());
 		String arr[] = values.toString().split(", ");
 		objRequestInformationTab=objAvialablePage.clickRequestInformationTab();
 		String actualValue=objRequestInformationTab.getTabHeadingLabel();
@@ -31,7 +33,7 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 	
 	@Test(priority = 3, description="Verify Started status random row from the table")
 	public void verifyclickStartedStatusRowDetails() {
-		String values2=objAvialablePage.RowElements(objAvialablePage.passRandomStartedStatusRow());
+		values2=objAvialablePage.RowElements(objAvialablePage.passRandomStartedStatusRow());
 		String arr2[] = values2.toString().split(", ");
 		objRequestInformationTab=objAvialablePage.clickRequestInformationTab();
 		String actualValue=objRequestInformationTab.getTabHeadingLabel();
@@ -50,7 +52,26 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-	@Test(priority = 5, description="Verify Description Label")
+	@Test(priority = 5, description="Verify Part Name of End Status")
+	public void verifypartNameEnd() {
+		String actualValue=objRequestInformationTab.getPartName();
+		String arr[] = values.toString().split(", ");
+		System.out.println(actualValue);
+		String expectedValue = arr[4];
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 6, description="Verify Part Name of Started Status")
+	public void verifypartNameStarted() {
+		String actualValue=objRequestInformationTab.getPartName();
+		String arr2[] = values2.toString().split(", ");
+		System.out.println(actualValue);
+		String expectedValue = arr2[4];
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	
+	@Test(priority = 7, description="Verify Description Label")
 	public void verifydescriptionLabel() {
 		String actualValue=objRequestInformationTab.getDescriptionLabel();
 		System.out.println(actualValue);
@@ -58,9 +79,27 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-	@AfterTest
-	public void driverquit() {
-		driver.quit();
+	@Test(priority = 8, description="Verify Description of End Status")
+	public void verifypartDescriptionEnd() {
+		String actualValue=objRequestInformationTab.getDescription();
+		String arr[] = values.toString().split(", ");
+		System.out.println(actualValue);
+		String expectedValue = arr[4];
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
+	@Test(priority = 9, description="Verify Description of Started Status")
+	public void verifypartDescriptionStarted() {
+		String actualValue=objRequestInformationTab.getDescription();
+		String arr2[] = values2.toString().split(", ");
+		System.out.println(actualValue);
+		String expectedValue = arr2[4];
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+//	@AfterTest
+//	public void driverquit() {
+//		driver.quit();
+//	}
+//	
 }

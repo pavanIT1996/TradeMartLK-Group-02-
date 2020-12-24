@@ -28,9 +28,15 @@ public class RequestInformationTab {
 	WebElement requestTabHeading;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"home\"]/div/h5[1]")
+	WebElement requestPartNameLabel;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"home\"]/div/p")
 	WebElement requestPartName;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"home\"]/div/h5[2]")
+	WebElement requestDescriptionLabel;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"home\"]/div/div[1]")
 	WebElement requestDescription;
 	
 	// initialize methods
@@ -42,11 +48,21 @@ public class RequestInformationTab {
 	}
 	
 	public String getPartNameLabel() {
+		page.waitForWebElementToAppear(requestPartNameLabel);
+		return requestPartNameLabel.getText();
+	}
+	
+	public String getDescriptionLabel() {
+		page.waitForWebElementToAppear(requestDescriptionLabel);
+		return requestDescriptionLabel.getText();
+	}
+	
+	public String getPartName() {
 		page.waitForWebElementToAppear(requestPartName);
 		return requestPartName.getText();
 	}
 	
-	public String getDescriptionLabel() {
+	public String getDescription() {
 		page.waitForWebElementToAppear(requestDescription);
 		return requestDescription.getText();
 	}

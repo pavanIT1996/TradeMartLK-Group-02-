@@ -1,448 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="8" failed="6" skipped="0">
+<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-22T09:35:55 IST" name="Default suite" finished-at="2020-12-22T09:37:42 IST" duration-ms="107071">
+  <suite started-at="2020-12-24T09:29:55 IST" name="Default suite" finished-at="2020-12-24T09:31:25 IST" duration-ms="89135">
     <groups>
     </groups>
-    <test started-at="2020-12-22T09:35:55 IST" name="Default test" finished-at="2020-12-22T09:37:42 IST" duration-ms="107071">
-      <class name="TestClass.MyBidTabTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:35:55 IST" name="setup" finished-at="2020-12-22T09:36:00 IST" duration-ms="5329" status="PASS">
+    <test started-at="2020-12-24T09:29:55 IST" name="Default test" finished-at="2020-12-24T09:31:25 IST" duration-ms="89135">
+      <class name="TestClass.BiddingDateDropdownTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:29:55 IST" name="setup" finished-at="2020-12-24T09:30:04 IST" duration-ms="8224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:00 IST" name="verifyvalidlogin" finished-at="2020-12-22T09:36:10 IST" duration-ms="9392" status="PASS">
+        <test-method signature="verifyvalidlogin()[pri:0, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:04 IST" name="verifyvalidlogin" finished-at="2020-12-24T09:30:13 IST" duration-ms="9265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyvalidlogin -->
-        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:10 IST" name="verifyclickmakebidbutton" description="Verify Make Bid Button" finished-at="2020-12-22T09:36:16 IST" duration-ms="5935" status="PASS">
+        <test-method signature="verifyclickmakebidbutton()[pri:1, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:13 IST" name="verifyclickmakebidbutton" description="Verify Make Bid Button" finished-at="2020-12-24T09:30:19 IST" duration-ms="6426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyclickmakebidbutton -->
-        <test-method signature="verifyclickEndStatusRow()[pri:2, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:16 IST" name="verifyclickEndStatusRow" description="Verify End status random row from the table" finished-at="2020-12-22T09:36:18 IST" duration-ms="2615" status="PASS">
+        <test-method signature="verifyTodayButtonLabel()[pri:2, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:19 IST" name="verifyTodayButtonLabel" description="Verify Today Button Label" finished-at="2020-12-24T09:30:20 IST" duration-ms="1058" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyclickEndStatusRow -->
-        <test-method signature="verifyclickStartedStatusRow()[pri:3, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:18 IST" name="verifyclickStartedStatusRow" description="Verify Started status random row from the table" finished-at="2020-12-22T09:36:18 IST" duration-ms="2" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[bound must be positive]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: bound must be positive
-at java.base/java.util.Random.nextInt(Random.java:388)
-at WebPageClass.SupplierAvailableRequestPage.getRandomRow(SupplierAvailableRequestPage.java:533)
-at WebPageClass.SupplierAvailableRequestPage.passRandomStartedStatusRow(SupplierAvailableRequestPage.java:546)
-at TestClass.MyBidTabTest.verifyclickStartedStatusRow(MyBidTabTest.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- verifyTodayButtonLabel -->
+        <test-method signature="verifyTomorrowButtonLabel()[pri:3, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:20 IST" name="verifyTomorrowButtonLabel" description="Verify Tommorrow Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="99" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyclickStartedStatusRow -->
-        <test-method signature="verifypriceLabel()[pri:4, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:18 IST" name="verifypriceLabel" description="Verify Price Label" finished-at="2020-12-22T09:36:18 IST" duration-ms="77" status="PASS">
+        </test-method> <!-- verifyTomorrowButtonLabel -->
+        <test-method signature="verifyNext7ButtonLabel()[pri:4, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyNext7ButtonLabel" description="Verify Next 7 Day Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifypriceLabel -->
-        <test-method signature="verifywarrantyLabel()[pri:5, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:18 IST" name="verifywarrantyLabel" description="Verify warranty Label" finished-at="2020-12-22T09:36:18 IST" duration-ms="81" status="PASS">
+        </test-method> <!-- verifyNext7ButtonLabel -->
+        <test-method signature="verifyNext30ButtonLabel()[pri:5, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyNext30ButtonLabel" description="Verify Next 30 Day Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifywarrantyLabel -->
-        <test-method signature="verifydescriptionLabel()[pri:6, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:18 IST" name="verifydescriptionLabel" description="Verify description Label" finished-at="2020-12-22T09:36:19 IST" duration-ms="87" status="PASS">
+        </test-method> <!-- verifyNext30ButtonLabel -->
+        <test-method signature="verifythisMonthButtonLabel()[pri:6, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifythisMonthButtonLabel" description="Verify This Month Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="68" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifydescriptionLabel -->
-        <test-method signature="verifydreturnpolicyLabel()[pri:7, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:19 IST" name="verifydreturnpolicyLabel" description="Verify return policy Label" finished-at="2020-12-22T09:36:19 IST" duration-ms="81" status="PASS">
+        </test-method> <!-- verifythisMonthButtonLabel -->
+        <test-method signature="verifylastMonthButtonLabel()[pri:7, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifylastMonthButtonLabel" description="Verify Last Month Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifydreturnpolicyLabel -->
-        <test-method signature="verifyphotoLabel()[pri:8, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:19 IST" name="verifyphotoLabel" description="Verify photo Label" finished-at="2020-12-22T09:36:19 IST" duration-ms="92" status="PASS">
+        </test-method> <!-- verifylastMonthButtonLabel -->
+        <test-method signature="verifyLast7ButtonLabel()[pri:8, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyLast7ButtonLabel" description="Verify Last 7 Day Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyphotoLabel -->
-        <test-method signature="verifyinputs()[pri:9, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:19 IST" name="verifyinputs" description="Verify values in all inputs" finished-at="2020-12-22T09:36:39 IST" duration-ms="20085" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="menu1"]/div/div/div/div/div[1]/div[1]/div/button[1]' (tried for 20 second(s) with 100 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="menu1"]/div/div/div/div/div[1]/div[1]/div/button[1]' (tried for 20 second(s) with 100 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at WebPageClass.BasePage.waitForWebElementToAppear(BasePage.java:29)
-at WebPageClass.MyBidTab.clickEditButton(MyBidTab.java:143)
-at TestClass.MyBidTabTest.verifyinputs(MyBidTabTest.java:91)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="menu1"]/div/div/div/div/div[1]/div[1]/div/button[1]"}
-  (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Pavan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1be50325bfac9bc39e0e7cde2ece5b51
-*** Element info: {Using=xpath, value=//*[@id="menu1"]/div/div/div/div/div[1]/div[1]/div/button[1]}
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifyLast7ButtonLabel -->
+        <test-method signature="verifyYesterdayButtonLabel()[pri:9, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyYesterdayButtonLabel" description="Verify Yesterday Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="63" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyinputs -->
-        <test-method signature="verifyconfirmationboxTitle()[pri:10, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:39 IST" name="verifyconfirmationboxTitle" description="Verify confirmation box title" finished-at="2020-12-22T09:36:42 IST" duration-ms="2884" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[bound must be positive]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: bound must be positive
-at java.base/java.util.Random.nextInt(Random.java:388)
-at WebPageClass.SupplierAvailableRequestPage.getRandomRow(SupplierAvailableRequestPage.java:533)
-at WebPageClass.SupplierAvailableRequestPage.passRandomStartedStatusRow(SupplierAvailableRequestPage.java:546)
-at TestClass.MyBidTabTest.verifyclickStartedStatusRow(MyBidTabTest.java:38)
-at TestClass.MyBidTabTest.verifyconfirmationboxTitle(MyBidTabTest.java:107)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- verifyYesterdayButtonLabel -->
+        <test-method signature="verifyCustomButtonLabel()[pri:10, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyCustomButtonLabel" description="Verify Custom Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyconfirmationboxTitle -->
-        <test-method signature="verifyconfirmationboxDescription()[pri:11, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:36:42 IST" name="verifyconfirmationboxDescription" description="Verify confirmation box description" finished-at="2020-12-22T09:37:02 IST" duration-ms="20115" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[4]' (tried for 20 second(s) with 100 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[4]' (tried for 20 second(s) with 100 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at WebPageClass.BasePage.waitForWebElementToAppear(BasePage.java:29)
-at WebPageClass.MyBidTab.getConfirmationndescription(MyBidTab.java:236)
-at TestClass.MyBidTabTest.verifyconfirmationboxDescription(MyBidTabTest.java:117)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[9]/div/div[4]"}
-  (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Pavan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1be50325bfac9bc39e0e7cde2ece5b51
-*** Element info: {Using=xpath, value=/html/body/div[9]/div/div[4]}
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifyCustomButtonLabel -->
+        <test-method signature="verifySubmitButtonLabel()[pri:11, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifySubmitButtonLabel" description="Verify Submit Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyconfirmationboxDescription -->
-        <test-method signature="verifyconfirmationboxOkbuttonLable()[pri:12, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:37:02 IST" name="verifyconfirmationboxOkbuttonLable" description="Verify confirmation box ok button click" finished-at="2020-12-22T09:37:22 IST" duration-ms="20053" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[5]/button[1]' (tried for 20 second(s) with 100 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[5]/button[1]' (tried for 20 second(s) with 100 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at WebPageClass.BasePage.waitForWebElementToAppear(BasePage.java:29)
-at WebPageClass.MyBidTab.getConfirmationOkButtonlabel(MyBidTab.java:242)
-at TestClass.MyBidTabTest.verifyconfirmationboxOkbuttonLable(MyBidTabTest.java:125)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[9]/div/div[5]/button[1]"}
-  (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Pavan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1be50325bfac9bc39e0e7cde2ece5b51
-*** Element info: {Using=xpath, value=/html/body/div[9]/div/div[5]/button[1]}
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifySubmitButtonLabel -->
+        <test-method signature="verifyCancelButtonLabel()[pri:12, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyCancelButtonLabel" description="Verify Cancel Button Label" finished-at="2020-12-24T09:30:21 IST" duration-ms="78" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyconfirmationboxOkbuttonLable -->
-        <test-method signature="verifyconfirmationboxCancelbuttonLable()[pri:13, instance:TestClass.MyBidTabTest@609db43b]" started-at="2020-12-22T09:37:22 IST" name="verifyconfirmationboxCancelbuttonLable" description="Verify confirmation box cancel button click" finished-at="2020-12-22T09:37:42 IST" duration-ms="20112" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[5]/button[2]' (tried for 20 second(s) with 100 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[9]/div/div[5]/button[2]' (tried for 20 second(s) with 100 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at WebPageClass.BasePage.waitForWebElementToAppear(BasePage.java:29)
-at WebPageClass.MyBidTab.getConfirmationCancelButtonlabel(MyBidTab.java:247)
-at TestClass.MyBidTabTest.verifyconfirmationboxCancelbuttonLable(MyBidTabTest.java:133)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[9]/div/div[5]/button[2]"}
-  (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DESKTOP-V7PHNI8', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\Pavan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1be50325bfac9bc39e0e7cde2ece5b51
-*** Element info: {Using=xpath, value=/html/body/div[9]/div/div[5]/button[2]}
-at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifyCancelButtonLabel -->
+        <test-method signature="verifyTodayButtonHoverColor()[pri:13, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:21 IST" name="verifyTodayButtonHoverColor" description="Verify Today Button Hover color" finished-at="2020-12-24T09:30:25 IST" duration-ms="3588" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyconfirmationboxCancelbuttonLable -->
-      </class> <!-- TestClass.MyBidTabTest -->
+        </test-method> <!-- verifyTodayButtonHoverColor -->
+        <test-method signature="verifyTodayButtonClick()[pri:14, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:25 IST" name="verifyTodayButtonClick" description="Verify Today Button click" finished-at="2020-12-24T09:30:28 IST" duration-ms="3328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTodayButtonClick -->
+        <test-method signature="verifyTomorrowButtonClick()[pri:15, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:28 IST" name="verifyTomorrowButtonClick" description="Verify Tomorrow Button click" finished-at="2020-12-24T09:30:34 IST" duration-ms="6296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTomorrowButtonClick -->
+        <test-method signature="verifyNext7ButtonClick()[pri:16, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:34 IST" name="verifyNext7ButtonClick" description="Verify Next 7 Days Button click" finished-at="2020-12-24T09:30:41 IST" duration-ms="6287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNext7ButtonClick -->
+        <test-method signature="verifyNext30ButtonClick()[pri:17, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:41 IST" name="verifyNext30ButtonClick" description="Verify Next 30 Days Button click" finished-at="2020-12-24T09:30:47 IST" duration-ms="6274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNext30ButtonClick -->
+        <test-method signature="verifyThisMonthButtonClick()[pri:18, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:47 IST" name="verifyThisMonthButtonClick" description="Verify This Month Button click" finished-at="2020-12-24T09:30:53 IST" duration-ms="6269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyThisMonthButtonClick -->
+        <test-method signature="verifyLastMonthButtonClick()[pri:19, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:30:53 IST" name="verifyLastMonthButtonClick" description="Verify Last Month Button click" finished-at="2020-12-24T09:31:00 IST" duration-ms="6279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLastMonthButtonClick -->
+        <test-method signature="verifyLast7ButtonClick()[pri:20, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:31:00 IST" name="verifyLast7ButtonClick" description="Verify Last 7 Days Button click" finished-at="2020-12-24T09:31:06 IST" duration-ms="6294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLast7ButtonClick -->
+        <test-method signature="verifyYesterdayButtonClick()[pri:21, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:31:06 IST" name="verifyYesterdayButtonClick" description="Verify Yesterday Button click" finished-at="2020-12-24T09:31:12 IST" duration-ms="6280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyYesterdayButtonClick -->
+        <test-method signature="verifySubmitButtonClick()[pri:22, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:31:12 IST" name="verifySubmitButtonClick" description="Verify submit Button click" finished-at="2020-12-24T09:31:18 IST" duration-ms="6225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitButtonClick -->
+        <test-method signature="verifyCancelButtonClick()[pri:23, instance:TestClass.BiddingDateDropdownTest@4f67eb2a]" started-at="2020-12-24T09:31:18 IST" name="verifyCancelButtonClick" description="Verify cancel Button click" finished-at="2020-12-24T09:31:25 IST" duration-ms="6215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCancelButtonClick -->
+      </class> <!-- TestClass.BiddingDateDropdownTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

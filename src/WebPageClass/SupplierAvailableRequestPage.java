@@ -53,6 +53,7 @@ public class SupplierAvailableRequestPage {
 	@FindBy(how = How.XPATH, using = "/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/a[1]")
 	WebElement printButton;
 
+	
 	@FindBy(how = How.XPATH, using = "/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/a[2]")
 	WebElement refreshButton;
 
@@ -84,7 +85,7 @@ public class SupplierAvailableRequestPage {
 
 	@FindBy(how = How.ID, using = "typedrop")
 	WebElement winningstatusDropDown;
-
+	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"duereportrange\"]/span")
 	WebElement biddingdateDropDown;
 
@@ -93,6 +94,7 @@ public class SupplierAvailableRequestPage {
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_filter\"]/label/input")
 	WebElement searchInput;
+	
 
 	// initialize table columns Headers
 	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable\"]/thead/tr/th[1]")
@@ -143,15 +145,6 @@ public class SupplierAvailableRequestPage {
 	@FindBy(how = How.ID, using = "crud-main-datatable_previous")
 	WebElement paginationPreviousLabel;
 
-	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_paginate\"]/ul/li[2]/a")
-	WebElement paginationFirstLabel;
-
-	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_paginate\"]/ul/li[3]/a")
-	WebElement paginationSecondLabel;
-
-	@FindBy(how = How.XPATH, using = "//*[@id=\"crud-main-datatable_paginate\"]/ul/li[4]/a")
-	WebElement paginationThirdLabel;
-
 	@FindBy(how = How.ID, using = "crud-main-datatable_next")
 	WebElement paginationNextLabel;
 
@@ -183,7 +176,7 @@ public class SupplierAvailableRequestPage {
 		page.waitForWebElementToAppear(printButton);
 		printButton.click();
 	}
-
+	
 	public void clickRefreshButton() {
 		page.waitForWebElementToAppear(refreshButton);
 		printButton.click();
@@ -228,8 +221,9 @@ public class SupplierAvailableRequestPage {
 		return winningstatusDropDown;
 	}
 
-	// initialize bidding date dropdown methods
-
+	
+	// initialize bidding date methods
+	
 	public String getBiddingDateLabel() {
 		page.waitForWebElementToAppear(biddingDate);
 		String arr[] = biddingDate.getText().split("\\r\\n|\\n|\\r");
@@ -240,7 +234,7 @@ public class SupplierAvailableRequestPage {
 		page.waitForWebElementToAppear(biddingdateDropDown);
 		return biddingdateDropDown.getText();
 	}
-
+	
 	public String getCurrentDateAndTime() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 		LocalDateTime now = LocalDateTime.now();
@@ -248,6 +242,14 @@ public class SupplierAvailableRequestPage {
 		String Full = dtf.format(lastmonth) + " - " + dtf.format(now);
 		return Full;
 	}
+
+	
+	public BiddingDateDropdown clickBiddingDateDropdown() {
+		page.waitForWebElementToAppear(biddingdateDropDown);
+		biddingdateDropDown.click();
+		return new BiddingDateDropdown(PageClassWebDriver);
+	}
+	
 
 	// initialize show entries dropdown methods
 
@@ -280,6 +282,22 @@ public class SupplierAvailableRequestPage {
 		page.waitForWebElementToAppear(searchInput);
 		searchInput.sendKeys(value);
 	}
+	
+	public List<String> searchValuesSet() {
+		List<String> Values = new ArrayList<>();
+		Values.add("PR0000000060");
+		Values.add("1:00");
+		Values.add("10:00");
+		Values.add("thilina");
+		Values.add("END");
+		Values.add(" ");
+		Values.add("Values");
+		Values.add("XENON");
+		Values.add("Test");
+		Values.add("2020-09-30");
+		Values.add("@#$%^&*()_+!?><");
+		return Values;
+	}
 
 	public void cleansearch() {
 		searchInput.sendKeys(Keys.CONTROL + "a");
@@ -290,7 +308,7 @@ public class SupplierAvailableRequestPage {
 
 	public List<String> GetActualList(int index) {
 		List<WebElement> List = new ArrayList<>();
-		Select100fromShowEntries();
+//		Select100fromShowEntries();
 		List = AllTableRows();
 		List<String> ValueSet = new ArrayList<>();
 		for (WebElement Value : List) {
@@ -302,12 +320,19 @@ public class SupplierAvailableRequestPage {
 	}
 
 	public List<String> GetExpectedList(int index, String Type) {
+		List<WebElement> List = new ArrayList<>();
+		List = allrows;
 		List<String> ValueSet = new ArrayList<>();
-		ValueSet = GetActualList(index);
+		for (WebElement Value : List) {
+			String text = RowElements(Value);
+			String arr[] = text.toString().split(", ");
+			ValueSet.add(arr[index]);
+		}
+//		ValueSet = GetActualList(index);
 		if (Type.equals("descending")) {
-			ValueSet.sort(Comparator.reverseOrder());
+			Collections.sort(ValueSet, String.CASE_INSENSITIVE_ORDER.reversed());
 		} else {
-			ValueSet.sort(Comparator.naturalOrder());
+			Collections.sort(ValueSet, String.CASE_INSENSITIVE_ORDER);
 		}
 		return ValueSet;
 	}
@@ -440,33 +465,37 @@ public class SupplierAvailableRequestPage {
 
 	public String getPaginationPreviousLabel() {
 		page.waitForWebElementToAppear(paginationPreviousLabel);
+		page.scrolldown();
 		return paginationPreviousLabel.getText();
 	}
 
 	public String getHoverPaginationPreviousLabel() {
 		page.waitForWebElementToAppear(paginationPreviousLabel);
 		action.moveToElement(paginationPreviousLabel).build().perform();
-		return paginationPreviousLabel.getText();
+		return paginationPreviousLabel.getAttribute("class");
 	}
-
-	public String getPaginationFirstLabel() {
-		page.waitForWebElementToAppear(paginationFirstLabel);
-		return paginationFirstLabel.getText();
-	}
-
-	public String getPaginationSecondLabel() {
-		page.waitForWebElementToAppear(paginationSecondLabel);
-		return paginationSecondLabel.getText();
-	}
-
-	public String getPaginationThirdLabel() {
-		page.waitForWebElementToAppear(paginationThirdLabel);
-		return paginationThirdLabel.getText();
+	
+	public void clickPaginationPreviousLabel() {
+		page.waitForWebElementToAppear(paginationPreviousLabel);
+		page.scrolldown();
+		paginationPreviousLabel.findElement(By.tagName("a")).click();
 	}
 
 	public String getPaginationNextLabel() {
 		page.waitForWebElementToAppear(paginationNextLabel);
+		page.scrolldown();
 		return paginationNextLabel.getText();
+	}
+	
+	public String getHoverPaginationNextLabel() {
+		page.waitForWebElementToAppear(paginationNextLabel);
+		action.moveToElement(paginationNextLabel).build().perform();
+		return paginationNextLabel.getAttribute("class");
+	}
+	
+	public void clickPaginationNextLabel() {
+		page.waitForWebElementToAppear(paginationNextLabel);
+		paginationNextLabel.findElement(By.tagName("a")).click();
 	}
 
 	// initialize tab methods
@@ -561,7 +590,12 @@ public class SupplierAvailableRequestPage {
 		DropDownUtilityClass DropDown = new DropDownUtilityClass();
 		DropDown.selectFromDropdown("100", getShowEntriesDropdown());
 	}
-
+	
+	public void Select25fromShowEntries() {
+		DropDownUtilityClass DropDown = new DropDownUtilityClass();
+		DropDown.selectFromDropdown("25", getShowEntriesDropdown());
+	}
+	
 	public boolean CheckTableValuesChanges(String check) {
 		boolean bflag = false;
 		List<WebElement> ExcelValue = new ArrayList<>();

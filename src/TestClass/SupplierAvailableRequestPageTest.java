@@ -51,10 +51,10 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 	}
 
 //	@Test(priority=5)
-//	public void verifyPrintButton() {
+//	public void verifyPrintButton() throws InterruptedException {
 //		objAvialablePage.clickPrintButton();
 //	}
-//	
+	
 //	@Test(priority=6)
 //	public void verifyRefreshButton() {
 //		objAvialablePage.clickRefreshButton();
@@ -248,7 +248,6 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		DropDown.selectFromDropdown(defaultValue, winningStatusDropdown);
 	}
 
-
 	// call the bidding date dropdown test methods
 
 	@Test(priority = 28, description = "Verify Bidding Date Dropdown Label")
@@ -337,9 +336,9 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 
 	@Test(priority = 38, description = "Verify Input in Search box")
 	public void verifyInputSearch() throws InterruptedException {
-		List<String> ExcelValue = new ArrayList<>();
-		ExcelValue = Excel.readBooksFromExcelFile(0, Excel.getInputExcelPath());
-		String values = Arrays.toString(ExcelValue.toArray()).replace("[", "").replace("]", "");
+		List<String> Values = new ArrayList<>();
+		Values = objAvialablePage.searchValuesSet();
+		String values = Arrays.toString(Values.toArray()).replace("[", "").replace("]", "");
 		String Arr[] = values.split(", ");
 		for (String Value : Arr) {
 			objAvialablePage.insertSearch(Value);
@@ -362,6 +361,7 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 	
 	@Test(priority = 40, description = "Verify table descending order by date")
 	public void verifyColumnDateDescending(){
+		objAvialablePage.Select100fromShowEntries();
 		objAvialablePage.AllTableRows();
 		List<String> expectedList = new ArrayList<>();
 		List<String> actualList = new ArrayList<>();
@@ -564,8 +564,9 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 
 	@Test(priority = 63, description = "Verify Showing Label")
 	public void verifyShowingLabel() {
+		int total=objAvialablePage.RowCounts();
 		String actualValue = objAvialablePage.getShowingLabel();
-		String expectedValue = "Showing 1 to 10 of 67 entries";
+		String expectedValue = "Showing 1 to "+total+" of "+total+" entries";
 		AssertJUnit.assertEquals("Label detail is Incorrect", expectedValue, actualValue);
 	}
 
@@ -578,58 +579,64 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 
-	@Test(priority = 65, description = "Verify showing pagination First Label")
-	public void verifyShowingPaginationFirstLabel() {
-		String actualValue = objAvialablePage.getPaginationFirstLabel();
-		String expectedValue = "1";
-		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
-	}
-
-	@Test(priority = 66, description = "Verify showing pagination Second Label")
-	public void verifyShowingPaginationSecondLabel() {
-		String actualValue = objAvialablePage.getPaginationSecondLabel();
-		String expectedValue = "2";
-		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
-	}
-
-	@Test(priority = 67, description = "Verify showing pagination Third Label")
-	public void verifyShowingPaginationThirdLabel() {
-		String actualValue = objAvialablePage.getPaginationThirdLabel();
-		String expectedValue = "3";
-		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
-	}
-
-	@Test(priority = 68, description = "Verify showing pagination next Label")
+	@Test(priority = 65, description = "Verify showing pagination next Label")
 	public void verifyShowingPaginationNextLabel() {
 		String actualValue = objAvialablePage.getPaginationNextLabel();
 		String expectedValue = "Next";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
+	
 
-//	@Test(priority = 26)
-//	public void verifyHoverPaginationPrevious() {
-//		String actualValue = objAvialablePage.getHoverPaginationPreviousLabel();
-//		String expectedValue = "Next";
-//		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
-//	}
+	@Test(priority = 66, description = "Verify click pagination Previous Label disabled")
+	public void verifyHoverPaginationPrevious() throws InterruptedException {
+		String actualValue=objAvialablePage.getHoverPaginationPreviousLabel();
+		String expectedValue = "paginate_button previous disabled";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+		Thread.sleep(3000);
+	}
+	
+	
+	@Test(priority = 67, description = "Verify hover pagination next Label disabled")
+	public void verifyHoverPaginationNext() throws InterruptedException {
+		String actualValue=objAvialablePage.getHoverPaginationNextLabel();
+		String expectedValue = "paginate_button next disabled";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+		Thread.sleep(3000);
+	}
+
+	@Test(priority = 68, description = "Verify click pagination next Label")
+	public void verifyClickPaginationNextLabel() throws InterruptedException {
+		objAvialablePage.Select25fromShowEntries();
+		Thread.sleep(3000);
+		objAvialablePage.clickPaginationNextLabel();
+		Thread.sleep(3000);
+	}
+	
+	@Test(priority = 69, description = "Verify click pagination previous Label")
+	public void verifyClickPaginationPreviousLabel() throws InterruptedException {
+		objAvialablePage.clickPaginationPreviousLabel();
+		Thread.sleep(3000);
+	}
+	
+
 
 	// call the tabs related test methods
 
-	@Test(priority = 69, description = "Verify Request information Tab Label")
+	@Test(priority = 70, description = "Verify Request information Tab Label")
 	public void verifyrequestInformationTabLabel() {
 		String actualValue = objAvialablePage.getRequestInformationTab();
 		String expectedValue = "Request Informations";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 
-	@Test(priority = 70, description = "Verify My Bid Tab Label")
+	@Test(priority = 71, description = "Verify My Bid Tab Label")
 	public void verifymyBidTabLabel() {
 		String actualValue = objAvialablePage.getMyBidTab();
 		String expectedValue = "My Bid";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 
-	@Test(priority = 71, description = "Verify Default active Tab")
+	@Test(priority = 72, description = "Verify Default active Tab")
 	public void verifyDefaultactiveTab() {
 		String actualValue = objAvialablePage.getActivetab();
 		System.out.println(actualValue);
@@ -637,7 +644,7 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 
-	@Test(priority = 72, description = "Verify My Bid Tab click")
+	@Test(priority = 73, description = "Verify My Bid Tab click")
 	public void verifyclickMyBidTab() {
 		objAvialablePage.clickMyBidTab();
 		String actualValue = objAvialablePage.getActivetab();
@@ -646,7 +653,7 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 
-	@Test(priority = 73, description = "Verify Request Information Tab click")
+	@Test(priority = 74, description = "Verify Request Information Tab click")
 	public void verifyclickRequestInformationTab() {
 		objAvialablePage.clickRequestInformationTab();
 		String actualValue = objAvialablePage.getActivetab();
@@ -654,7 +661,7 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		String expectedValue = "Request Informations";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
-	
+//	
 //	@AfterTest
 //	public void driverquit() {
 //		driver.quit();
