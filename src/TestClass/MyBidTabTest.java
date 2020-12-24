@@ -1,7 +1,5 @@
 package TestClass;
 
-
-
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -20,30 +18,34 @@ public class MyBidTabTest extends SupplierLoginPageTest {
 	}
 
 	@Test(priority = 2, description="Verify End status random row from the table")
-	public void verifyclickEndStatusRow() {
+	public void verifyclickEndStatusRow() throws InterruptedException {
 		String values=objAvialablePage.RowElements(objAvialablePage.passRandomEndStatusRow());
+		Thread.sleep(3000);
 		System.out.println(values.toString());
 		String arr[] = values.toString().split(", ");
 		objMyBidTab = objAvialablePage.clickMyBidTab();
+		Thread.sleep(3000);
 		String actualValue = objMyBidTab.getTabHeadingLabel();
-		System.out.println(actualValue);
+		System.out.println("Actual value : "+actualValue);
 		String expectedValue = "My Bid for - "+arr[4];
-		System.out.println(expectedValue.toString());
+		System.out.println("Expected value : "+expectedValue.toString());
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
 	
 	@Test(priority = 3, description="Verify Started status random row from the table")
-	public void verifyclickStartedStatusRow() {
+	public void verifyclickStartedStatusRow() throws InterruptedException {
 		String values2=objAvialablePage.RowElements(objAvialablePage.passRandomStartedStatusRow());
+		Thread.sleep(3000);
 		System.out.println(values2.toString());
 		String arr2[] = values2.toString().split(", ");
 		objMyBidTab = objAvialablePage.clickMyBidTab();
-		String actualValue = objMyBidTab.getTabHeadingLabel();
-		System.out.println(actualValue);
+		Thread.sleep(3000);
+		String actualValue2 = objMyBidTab.getTabHeadingLabel();
+		System.out.println("Actual value : "+actualValue2);
 		String expectedValue = "My Bid for - "+arr2[4];
-		System.out.println(expectedValue.toString());
-		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+		System.out.println("Expected value : "+expectedValue.toString());
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue2);
 	}
 
 	@Test(priority = 4, description="Verify Price Label")
@@ -87,25 +89,28 @@ public class MyBidTabTest extends SupplierLoginPageTest {
 	}
 	
 	@Test(priority = 9, description="Verify values in all inputs")
-	public void verifyinputs() {
+	public void verifyinputs() throws InterruptedException {
 		objMyBidTab.clickEditButton();
+		Thread.sleep(3000);
 		objMyBidTab.insertprice("100");
+		Thread.sleep(3000);
 		objMyBidTab.insertwarranty("testwarranty");
+		Thread.sleep(3000);
 		objMyBidTab.insertdescription("testdescription");;
+		Thread.sleep(3000);
 		objMyBidTab.insertreturnpolicy("testPolicy");
-		objMyBidTab.clickSaveButton();
+		Thread.sleep(3000);
 		objMyBidTab.insertfirstpic("C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\Attachments\\PictureFiles\\Test01JPG.jpg");
+		Thread.sleep(3000);
 		objMyBidTab.insertsecondpic("C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\Attachments\\PictureFiles\\Test03PNG.jpg");
+		Thread.sleep(3000);
 		objMyBidTab.insertthirdpic("C:\\Users\\Pavan\\SeleniumPractice\\TradeMartLK\\Attachments\\PictureFiles\\Test01PNG.png");
-		objMyBidTab.clickConfirmationOkButton();
+		Thread.sleep(3000);
+		objMyBidTab.clickSaveButton();
 	}
 	
 	@Test(priority = 10, description="Verify confirmation box title")
 	public void verifyconfirmationboxTitle() {
-		objMyBidTab.waitforinvisibleloading();
-		objMyBidTab.refreshThePage();
-		verifyclickStartedStatusRow();
-		objMyBidTab.clickEditButton();
 		String actualValue = objMyBidTab.getConfirmationtitle();
 		System.out.println(actualValue);
 		String expectedValue = "Confirmation Needed";
@@ -120,7 +125,7 @@ public class MyBidTabTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-	@Test(priority = 12, description="Verify confirmation box ok button click")
+	@Test(priority = 12, description="Verify confirmation box ok button label")
 	public void verifyconfirmationboxOkbuttonLable() {
 		String actualValue = objMyBidTab.getConfirmationOkButtonlabel();
 		System.out.println(actualValue);
@@ -128,19 +133,106 @@ public class MyBidTabTest extends SupplierLoginPageTest {
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-	@Test(priority = 13, description="Verify confirmation box cancel button click")
-	public void verifyconfirmationboxCancelbuttonLable() {
+	@Test(priority = 13, description="Verify confirmation box cancel button label")
+	public void verifyconfirmationboxCancelbuttonLable() throws InterruptedException {
 		String actualValue = objMyBidTab.getConfirmationCancelButtonlabel();
 		System.out.println(actualValue);
 		String expectedValue = "CANCEL";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+		Thread.sleep(3000);
+		objMyBidTab.clickConfirmationOkButton();
+		Thread.sleep(5000);
 	}
 	
-//	@AfterTest
-//	public void driverquit() {
-//		driver.quit();
-//	}
-//	
-
+	@Test(priority = 14, description="Verify notificaion title")
+	public void verifynotificationTitle() {
+		String actualValue = objMyBidTab.getNotifcationTitle();
+		String expectedValue = "Success";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 14, description="Verify notification description")
+	public void verifynotificationDescription() {
+		String actualValue = objMyBidTab.getNotifcationDescription();
+		String expectedValue = "Woow . It worked :)";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 15, description="Verify save button label")
+	public void verifySaveButtonLabel() {
+		String actualValue = objMyBidTab.getSaveButton();
+		String expectedValue = "Save";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 16, description = "Verify Save Button color")
+	public void verifySaveButtonColor() throws InterruptedException{
+		String color=objMyBidTab.getSaveButtonColor();
+		Thread.sleep(3000);
+		System.out.println("Save color : "+color);
+		String actualLabel=objMyBidTab.convertToHex(color);
+		String expectedLabel = "#26b99a";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedLabel, actualLabel);
+	}
+	
+	@Test(priority = 17, description="Verify edit button label")
+	public void verifyEditButtonLabel() {
+		String actualValue = objMyBidTab.getEditButton();
+		String expectedValue = "Edit";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 18, description="Verify reset button label")
+	public void verifyResetButtonLabel() {
+		String actualValue = objMyBidTab.getResetButton();
+		String expectedValue = "Reset";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 19, description = "Verify Save Button color")
+	public void verifyResetButtonColor() throws InterruptedException{
+		String color=objMyBidTab.getResetButtonColor();
+		Thread.sleep(3000);
+		System.out.println("Reset color : "+color);
+		String actualLabel=objMyBidTab.convertToHex(color);
+		String expectedLabel = "#337ab7";
+		AssertJUnit.assertEquals("Label is Incorrect", expectedLabel, actualLabel);
+	}
+	
+	@Test(priority = 20, description="Verify hover disabled")
+	public void verifyHoverDisable() throws InterruptedException {
+		Thread.sleep(3000);
+		String actualValue = objMyBidTab.getHoverPriceinput();
+		System.out.println("Actual : "+actualValue);
+		String expectedValue = "not-allowed";
+		System.out.println("Expected : "+expectedValue);
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 21, description="Verify Input Disabled")
+	public void verifyInputDisabled() throws InterruptedException {
+		Thread.sleep(3000);
+		String actualValue = objMyBidTab.getPriceinputDisabled();
+		System.out.println("Actual : "+actualValue);
+		String expectedValue = "true";
+		System.out.println("Expected : "+expectedValue);
+		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
+	}
+	
+	@Test(priority = 22, description="Verify Input Enabled")
+	public void verifyInputEnabled() throws InterruptedException {
+		objMyBidTab.clickEditButton();
+		Thread.sleep(3000);
+		String actualValue = objMyBidTab.getPriceinputDisabled();
+		System.out.println("Actual : "+actualValue);
+		System.out.println("Expected : "+null);
+		AssertJUnit.assertEquals("Label is Incorrect", null, actualValue);
+	}
+	
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
+	}
 	
 }

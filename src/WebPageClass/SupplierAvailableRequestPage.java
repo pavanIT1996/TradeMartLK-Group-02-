@@ -5,14 +5,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +16,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.AssertJUnit;
 
 import UtilityClass.DropDownUtilityClass;
 import UtilityClass.ExcelUtilityClass;
@@ -572,6 +567,8 @@ public class SupplierAvailableRequestPage {
 	}
 
 	public WebElement passRandomStartedStatusRow() {
+		Select100fromShowEntries();
+		AllTableRows();
 		return getRandomRow(startedstatusrows);
 	}
 

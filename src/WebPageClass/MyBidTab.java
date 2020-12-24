@@ -1,6 +1,5 @@
 package WebPageClass;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class MyBidTab {
 	BasePage page;
 	Actions action;
-
+    
 	WebDriver PageClassWebDriver;
 
 	public MyBidTab(WebDriver TestClassParameterDriver) {
@@ -94,11 +93,17 @@ public class MyBidTab {
 	
 	// initialize loading
 	
-	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"GlobleLoadingDiv\"]")
 	WebElement loadingspan;
 	
+	// initialize notification
 	
+	@FindBy(how = How.XPATH, using = "/html/body/div[9]/div/h4")
+	WebElement notificationtitle;
+	
+	
+	@FindBy(how = How.XPATH, using = "/html/body/div[9]/div/div[4]")
+	WebElement notificationdescription;
 	
 	// initialize methods
 	
@@ -144,9 +149,24 @@ public class MyBidTab {
 		editbutton.click();
 	}
 	
+	public String getEditButton() {
+		page.waitForWebElementToAppear(editbutton);
+		return editbutton.getText();
+	}
+	
 	public void clickResetButton() {
 		page.waitForWebElementToAppear(resetbutton);
 		resetbutton.click();
+	}
+	
+	public String getResetButton() {
+		page.waitForWebElementToAppear(resetbutton);
+		return resetbutton.getText();
+	}
+	
+	public String getResetButtonColor() {
+		page.waitForWebElementToAppear(resetbutton);
+		return resetbutton.getCssValue("background-color");
 	}
 	
 	public void clickSaveButton() {
@@ -154,6 +174,26 @@ public class MyBidTab {
 		savebutton.click();
 	}
 	
+	public String getSaveButton() {
+		page.waitForWebElementToAppear(savebutton);
+		return savebutton.getText();
+	}
+	
+	public String getSaveButtonColor() {
+		page.waitForWebElementToAppear(savebutton);
+		return savebutton.getCssValue("background-color");
+	}
+	
+	public String convertToHex(String color) {
+		String[] numbers = color.replace("rgba(", "").replace(")", "").split(",");
+		int r = Integer.parseInt(numbers[0].trim());
+		int g = Integer.parseInt(numbers[1].trim());
+		int b = Integer.parseInt(numbers[2].trim());
+		System.out.println("r: " + r + "g: " + g + "b: " + b);
+		String hex = "#" + Integer.toHexString(r) + Integer.toHexString(g) + Integer.toHexString(b);
+		return hex;
+	}
+
 	
 	// initialize tab input related methods
 	
@@ -240,12 +280,12 @@ public class MyBidTab {
 	
 	public String getConfirmationOkButtonlabel(){
 		page.waitForWebElementToAppear(okbutton);
-		return okbutton.getText();
+		return 	okbutton.getText();
 	}
 	
 	public String getConfirmationCancelButtonlabel(){
 		page.waitForWebElementToAppear(cancelbutton);
-		return cancelbutton.getText();
+		return 	cancelbutton.getText();
 	}
 	
 	
@@ -259,13 +299,28 @@ public class MyBidTab {
 		page.waitForWebElementToAppear(cancelbutton);
 		cancelbutton.click();
 	}
+
+	// initialize notification box related methods
 	
-	public void refreshThePage(){
-		PageClassWebDriver.navigate().refresh();
+	public String getNotifcationTitle(){
+		page.waitForWebElementToAppear(notificationtitle);
+		return 	notificationtitle.getText();
 	}
 	
-	public void waitforinvisibleloading(){
-		page.waitForElementToDisappear(loadingspan);
+	public String getNotifcationDescription(){
+		page.waitForWebElementToAppear(notificationdescription);
+		return 	notificationdescription.getText();
 	}
 	
+	
+	public String getHoverPriceinput() {
+		page.waitForWebElementToAppear(priceinput);
+		action.moveToElement(priceinput).build().perform();
+		return priceinput.getCssValue("cursor");
+	}
+	
+	public String getPriceinputDisabled() {
+		page.waitForWebElementToAppear(priceinput);
+		return priceinput.getAttribute("disabled");
+	}
 }

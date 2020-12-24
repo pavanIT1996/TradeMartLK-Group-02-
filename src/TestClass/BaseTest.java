@@ -1,6 +1,5 @@
 package TestClass;
 
-
 import org.testng.annotations.BeforeClass;
 
 import WebPageClass.GarageLoginPage;
@@ -8,7 +7,6 @@ import WebPageClass.SupplierLoginPage;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 
 public class BaseTest {
 	
@@ -34,7 +32,6 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver",path);
         driver = new ChromeDriver();
     }
-    
     
     public SupplierLoginPage goSupLoginPage(){
     	System.out.println(driver.toString()+" 01");

@@ -661,10 +661,10 @@ public class SupplierAvailableRequestPageTest extends SupplierLoginPageTest {
 		String expectedValue = "Request Informations";
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
-//	
-//	@AfterTest
-//	public void driverquit() {
-//		driver.quit();
-//	}
-//	
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
+	}
+	
 }

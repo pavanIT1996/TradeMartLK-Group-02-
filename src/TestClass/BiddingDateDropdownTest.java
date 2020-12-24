@@ -1,8 +1,8 @@
 package TestClass;
 
-import static org.testng.Assert.assertEquals;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.BiddingDateDropdown;
@@ -213,5 +213,10 @@ public class BiddingDateDropdownTest extends SupplierLoginPageTest{
 		Thread.sleep(3000);
 		objBiddingDateDropdown.clickBiddingDateCancelButton();
 		Thread.sleep(3000);
+	}
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
 	}
 }

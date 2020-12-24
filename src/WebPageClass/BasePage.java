@@ -1,7 +1,5 @@
 package WebPageClass;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +30,6 @@ public class BasePage {
     protected void waitForElementToDisappear(WebElement element) {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
-
 
     protected void waitForElementToAppear(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

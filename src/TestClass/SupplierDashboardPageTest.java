@@ -2,6 +2,7 @@ package TestClass;
 
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import WebPageClass.SupplierAvailableRequestPage;
 
@@ -51,5 +52,10 @@ public class SupplierDashboardPageTest extends SupplierLoginPageTest {
 	@Test(priority = 8, description="Verify click purchase link")
 	public void verifyclickpurchase() {
 		objHomePage.clickPurchasePage();
+	}
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
 	}
 }

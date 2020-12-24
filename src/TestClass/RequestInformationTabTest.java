@@ -20,26 +20,26 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 	}
 	
 	@Test(priority = 2, description="Verify End status random row from the table")
-	public void verifyclickEndStatusRowDetails() {
+	public void verifyclickEndStatusRowDetails()  {
 		values=objAvialablePage.RowElements(objAvialablePage.passRandomEndStatusRow());
 		String arr[] = values.toString().split(", ");
 		objRequestInformationTab=objAvialablePage.clickRequestInformationTab();
 		String actualValue=objRequestInformationTab.getTabHeadingLabel();
-		System.out.println(actualValue);
+		System.out.println("Actual value: "+actualValue);
 		String expectedValue = "Bidding will Start "+arr[0]+" at "+arr[2]+" and end at "+arr[3]+" - "+arr[5];
-		System.out.println(expectedValue.toString());
+		System.out.println("Expected value: "+expectedValue.toString());
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
 	@Test(priority = 3, description="Verify Started status random row from the table")
-	public void verifyclickStartedStatusRowDetails() {
+	public void verifyclickStartedStatusRowDetails(){
 		values2=objAvialablePage.RowElements(objAvialablePage.passRandomStartedStatusRow());
 		String arr2[] = values2.toString().split(", ");
 		objRequestInformationTab=objAvialablePage.clickRequestInformationTab();
 		String actualValue=objRequestInformationTab.getTabHeadingLabel();
-		System.out.println(actualValue);
+		System.out.println("Actual value: "+actualValue);
 		String expectedValue = "Bidding will Start "+arr2[0]+" at "+arr2[2]+" and end at "+arr2[3]+" - "+arr2[5];
-		System.out.println(expectedValue.toString());
+		System.out.println("Expected value: "+expectedValue.toString());
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
@@ -97,9 +97,9 @@ public class RequestInformationTabTest extends SupplierLoginPageTest{
 		AssertJUnit.assertEquals("Label is Incorrect", expectedValue, actualValue);
 	}
 	
-//	@AfterTest
-//	public void driverquit() {
-//		driver.quit();
-//	}
-//	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
+	}
+	
 }
