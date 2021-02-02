@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.GarageUserManagementPage;
@@ -22,9 +23,13 @@ public class GarageUserManagementPageTest extends GarageLoginPageTest{
 	
 	@Test(priority = 4)
 	public void verifyHeading() {
-		String actualTitle = objGarUserMngPage.getHeading();
-		String expectedTitle = "Agent User Management";
-		AssertJUnit.assertEquals("Title Incorrect", expectedTitle, actualTitle);
+		objGarUserMngPage.clickcheck();
+//		String expectedTitle = "Agent User Management";
+//		AssertJUnit.assertEquals("Title Incorrect", expectedTitle, actualTitle);
+	}
+	
+	@AfterTest
+	public void driverquit() {
 		driver.quit();
 	}
 }

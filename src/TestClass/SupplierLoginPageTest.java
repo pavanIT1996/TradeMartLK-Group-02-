@@ -1,5 +1,6 @@
 package TestClass;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import WebPageClass.SupplierDashboardPage;
 
@@ -13,6 +14,11 @@ public class SupplierLoginPageTest extends BaseTest {
 		objSupLogin.setUsername("SQAG2");
 		objSupLogin.setPassword("123456");
 		objHomePage=objSupLogin.clickLoginButton();
+	}
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
 	}
 
 }

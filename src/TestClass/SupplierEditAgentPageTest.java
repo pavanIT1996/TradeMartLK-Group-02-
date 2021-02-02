@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.SupplierEditAgentPage;
@@ -28,6 +29,10 @@ public class SupplierEditAgentPageTest extends SupplierLoginPageTest{
 		String actualTitle = objSupEditAgePage.getHeading();
 		String expectedTitle = "Edit Agent Information";
 		AssertJUnit.assertEquals("Heading Incorrect", expectedTitle, actualTitle);
+	}
+	
+	@AfterTest
+	public void driverquit() {
 		driver.quit();
 	}
 

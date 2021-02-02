@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Smoke">
-  <test thread-count="5" name="Smoke Test">
+<suite thread-count="2" parallel="tests" name="Suite">
+  <test name="ChromeTest">
+  <parameter name="browser" value="Chrome" />
     <classes>
       <class name="TestClass.GarageLoginPageTest"/>
       <class name="TestClass.GarageUserManagementPageTest"/>
@@ -24,5 +25,30 @@
       <class name="TestClass.SupplierNotificationPageTest"/>
       <class name="TestClass.SupplierAvailableRequestPageTest"/>
     </classes>
-  </test> <!-- Smoke Test -->
-</suite> <!-- Smoke -->
+  </test>
+  <test name="FirefoxTest">
+  <parameter name="browser" value="Firefox" />
+    <classes>
+      <class name="TestClass.GarageLoginPageTest"/>
+      <class name="TestClass.GarageUserManagementPageTest"/>
+      <class name="TestClass.SupplierEditAgentPageTest"/>
+      <class name="TestClass.MyBidTabTest"/>
+      <class name="TestClass.SupplierUserManagementPageTest"/>
+      <class name="TestClass.GarageEditProfilePageTest"/>
+      <class name="TestClass.SupplierPurchaseOrderPageTest"/>
+      <class name="TestClass.GaragePurchaseOrderPageTest"/>
+      <class name="TestClass.SupplierLoginPageTest"/>
+      <class name="TestClass.GarageDashboardPageTest"/>
+      <class name="TestClass.GarageNotificationPageTest"/>
+      <class name="TestClass.GaragePartRequestPageTest"/>
+      <class name="TestClass.BiddingDateDropdownTest"/>
+      <class name="TestClass.GarageBidReviewPageTest"/>
+      <class name="TestClass.SupplierDashboardPageTest"/>
+      <class name="TestClass.RequestInformationTabTest"/>
+      <class name="TestClass.GarageEditAgentPageTest"/>
+      <class name="TestClass.SupplierEditProfilePageTest"/>
+      <class name="TestClass.SupplierNotificationPageTest"/>
+      <class name="TestClass.SupplierAvailableRequestPageTest"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

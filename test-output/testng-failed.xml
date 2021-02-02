@@ -1,17 +1,704 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
+      <class name="TestClass.GarageUserManagementPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageUserManagementPageTest -->
       <class name="TestClass.RequestInformationTabTest">
         <methods>
           <include name="verifypartDescriptionEnd"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyclickmakebidbutton"/>
           <include name="verifydescriptionLabel"/>
           <include name="verifypartNameEnd"/>
+          <include name="verifypartNameStarted"/>
+          <include name="verifyclickStartedStatusRowDetails"/>
+          <include name="verifypartNameLabel"/>
           <include name="verifypartDescriptionStarted"/>
+          <include name="verifyclickEndStatusRowDetails"/>
           <include name="setup"/>
+          <include name="driverquit"/>
         </methods>
       </class> <!-- TestClass.RequestInformationTabTest -->
+      <class name="TestClass.SupplierEditProfilePageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierEditProfilePageTest -->
+      <class name="TestClass.SupplierPurchaseOrderPageTest">
+        <methods>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyAcceptButtonColor"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyShowingLabel"/>
+          <include name="verifyTitle"/>
+          <include name="verifyRejectButtonColor"/>
+          <include name="verifyColumnBidID"/>
+          <include name="verifyPurchaseHeading"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="setup"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyHeading"/>
+          <include name="verifySparePartLabel"/>
+          <include name="verifyRejectButtonLabel"/>
+          <include name="verifyColumnSparePart"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyColumnRequestID"/>
+          <include name="verifyAcceptButtonLabel"/>
+        </methods>
+      </class> <!-- TestClass.SupplierPurchaseOrderPageTest -->
+      <class name="TestClass.GarageEditProfilePageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageEditProfilePageTest -->
+      <class name="TestClass.BiddingDateDropdownTest">
+        <methods>
+          <include name="verifyNext30ButtonLabel"/>
+          <include name="verifyNext7ButtonClick"/>
+          <include name="verifylastMonthButtonLabel"/>
+          <include name="verifyNext30ButtonClick"/>
+          <include name="verifyThisMonthButtonClick"/>
+          <include name="driverquit"/>
+          <include name="verifyYesterdayButtonLabel"/>
+          <include name="verifySubmitButtonClick"/>
+          <include name="verifyCancelButtonLabel"/>
+          <include name="verifyLast7ButtonClick"/>
+          <include name="verifyTodayButtonClick"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyNext7ButtonLabel"/>
+          <include name="verifySubmitButtonLabel"/>
+          <include name="verifyTodayButtonHoverColor"/>
+          <include name="verifythisMonthButtonLabel"/>
+          <include name="verifyTomorrowButtonClick"/>
+          <include name="verifyLastMonthButtonClick"/>
+          <include name="verifyTodayButtonLabel"/>
+          <include name="setup"/>
+          <include name="verifyCancelButtonClick"/>
+          <include name="verifyLast7ButtonLabel"/>
+          <include name="verifyTomorrowButtonLabel"/>
+          <include name="verifyCustomButtonLabel"/>
+          <include name="verifyYesterdayButtonClick"/>
+        </methods>
+      </class> <!-- TestClass.BiddingDateDropdownTest -->
+      <class name="TestClass.MyBidTabTest">
+        <methods>
+          <include name="verifyconfirmationboxCancelbuttonLable"/>
+          <include name="verifyResetButtonColor"/>
+          <include name="verifynotificationDescription"/>
+          <include name="verifySaveButtonLabel"/>
+          <include name="verifyclickEndStatusRow"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifydreturnpolicyLabel"/>
+          <include name="verifyHoverDisable"/>
+          <include name="verifyinputs"/>
+          <include name="verifynotificationTitle"/>
+          <include name="verifyconfirmationboxTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyInputDisabled"/>
+          <include name="verifySaveButtonColor"/>
+          <include name="verifydescriptionLabel"/>
+          <include name="verifyphotoLabel"/>
+          <include name="verifypriceLabel"/>
+          <include name="verifyResetButtonLabel"/>
+          <include name="verifyconfirmationboxDescription"/>
+          <include name="setup"/>
+          <include name="verifyInputEnabled"/>
+          <include name="verifyconfirmationboxOkbuttonLable"/>
+          <include name="verifywarrantyLabel"/>
+          <include name="verifyclickStartedStatusRow"/>
+          <include name="verifyEditButtonLabel"/>
+        </methods>
+      </class> <!-- TestClass.MyBidTabTest -->
+      <class name="TestClass.SupplierLoginPageTest">
+        <methods>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierLoginPageTest -->
+      <class name="TestClass.SupplierUserManagementPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierUserManagementPageTest -->
+      <class name="TestClass.GarageLoginPageTest">
+        <methods>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageLoginPageTest -->
+      <class name="TestClass.GarageEditAgentPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageEditAgentPageTest -->
+      <class name="TestClass.SupplierEditAgentPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierEditAgentPageTest -->
+      <class name="TestClass.SupplierDashboardPageTest">
+        <methods>
+          <include name="verifyclickusermanagement"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyTitle"/>
+          <include name="verifyclickavailaberequest"/>
+          <include name="verifyclickeditagent"/>
+          <include name="verifyclicknotification"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyclickpurchase"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierDashboardPageTest -->
+      <class name="TestClass.GaragePartRequestPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GaragePartRequestPageTest -->
+      <class name="TestClass.GarageBidReviewPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageBidReviewPageTest -->
+      <class name="TestClass.GarageDashboardPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageDashboardPageTest -->
+      <class name="TestClass.SupplierAvailableRequestPageTest">
+        <methods>
+          <include name="verifymyBidTabLabel"/>
+          <include name="verifyShowEntriesValues"/>
+          <include name="verifyBiddingStatusRowCounts"/>
+          <include name="verifyColumnCode"/>
+          <include name="verifyDefaultSearch"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyColumnBiddingStarts"/>
+          <include name="verifyDefaultWinningStatusDropdown"/>
+          <include name="verifyrequestInformationTabLabel"/>
+          <include name="verifyColumnDateAscending"/>
+          <include name="verifyShowingPaginationPreviousLabel"/>
+          <include name="verifyColumnBiddingEndsDescending"/>
+          <include name="verifyCountsSparePartDropdown"/>
+          <include name="verifShowEntriesSelect"/>
+          <include name="verifyInputSearch"/>
+          <include name="verifyShowingLabel"/>
+          <include name="verifyColumnBiddingEndsAscending"/>
+          <include name="verifyBiddingStatusWithTable"/>
+          <include name="verifyDefaultShowEntriesDropdown"/>
+          <include name="verifyBiddingStatusSelect"/>
+          <include name="verifyColumnFBiddingEnds"/>
+          <include name="verifyDefaultBiddingStatusDropdown"/>
+          <include name="verifySparePartValues"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyclickRequestInformationTab"/>
+          <include name="verifyColumnFBiddingStarts"/>
+          <include name="verifyColumnSparePartDescending"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyColumnDateDescending"/>
+          <include name="verifyCountsWinningStatusDropdown"/>
+          <include name="verifyWinningStatusRowCounts"/>
+          <include name="setup"/>
+          <include name="verifyColumnFSparePart"/>
+          <include name="verifySparePartSelect"/>
+          <include name="verifyColumnSparePartsAscending"/>
+          <include name="verifyDefaultactiveTab"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="verifyDefaultSparePartDropdown"/>
+          <include name="verifySparePartWithTable"/>
+          <include name="verifyColumnFStatus"/>
+          <include name="verifyWinningStatusSelect"/>
+          <include name="verifyWinningStatusValues"/>
+          <include name="verifyHoverPaginationPrevious"/>
+          <include name="driverquit"/>
+          <include name="verifyColumnBiddingStartsDescending"/>
+          <include name="verifyHeading"/>
+          <include name="verifyClickPaginationPreviousLabel"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyDefaultBiddingDateDropdown"/>
+          <include name="verifyClickPaginationNextLabel"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifySparePartRowCounts"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyTitle"/>
+          <include name="verifyColumnCodeAscending"/>
+          <include name="verifyBiddingStatusValues"/>
+          <include name="verifyColumnFCode"/>
+          <include name="verifyCountsShowEntriesDropdown"/>
+          <include name="verifyColumnBiddingStartsAscending"/>
+          <include name="verifyCountsBiddingStatusDropdown"/>
+          <include name="verifyHoverPaginationNext"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyWinningStatusWithTable"/>
+          <include name="verifySparePartLabel"/>
+          <include name="verifyclickMyBidTab"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyColumnFDate"/>
+          <include name="verifyColumnCodeDescending"/>
+          <include name="verifyShowingPaginationNextLabel"/>
+          <include name="verifyColumnSparePart"/>
+          <include name="verifyColumnStatusAscending"/>
+          <include name="verifyColumnStatusDescending"/>
+          <include name="verifyShowEntriesRowCounts"/>
+          <include name="verifyColumnBiddingEnds"/>
+        </methods>
+      </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
+      <class name="TestClass.GarageNotificationPageTest">
+        <methods>
+          <include name="verifyTimeColumnLabel"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyMessageStatusLabel"/>
+          <include name="verifyHeading"/>
+          <include name="driverquit"/>
+          <include name="verifyReadStatusValues"/>
+          <include name="setup"/>
+          <include name="verifyMessageGroupLabel"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyReadStatusColumnLabel"/>
+          <include name="verifyHeadingColumnLabel"/>
+          <include name="verifyEmailSendColumnLabel"/>
+          <include name="verifyDateColumnLabel"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyTitle"/>
+        </methods>
+      </class> <!-- TestClass.GarageNotificationPageTest -->
+      <class name="TestClass.SupplierNotificationPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyReadStatusValues"/>
+          <include name="verifyTimeColumnLabel"/>
+          <include name="driverquit"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+          <include name="verifyEmailSendColumnLabel"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyHeadingColumnLabel"/>
+          <include name="verifyMessageGroupLabel"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyMessageStatusLabel"/>
+          <include name="verifyDateColumnLabel"/>
+          <include name="verifyReadStatusColumnLabel"/>
+        </methods>
+      </class> <!-- TestClass.SupplierNotificationPageTest -->
+      <class name="TestClass.GaragePurchaseOrderPageTest">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyPurchaseHeading"/>
+          <include name="verifyColumnBidID"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="verifyShowingLabel"/>
+          <include name="setup"/>
+          <include name="verifySparePartLabel"/>
+          <include name="driverquit"/>
+          <include name="verifyHeading"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifyColumnRequestID"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyColumnSparePart"/>
+        </methods>
+      </class> <!-- TestClass.GaragePurchaseOrderPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="TestClass.GarageUserManagementPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageUserManagementPageTest -->
+      <class name="TestClass.RequestInformationTabTest">
+        <methods>
+          <include name="verifypartDescriptionEnd"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifydescriptionLabel"/>
+          <include name="verifypartNameEnd"/>
+          <include name="verifypartNameStarted"/>
+          <include name="verifyclickStartedStatusRowDetails"/>
+          <include name="verifypartNameLabel"/>
+          <include name="verifypartDescriptionStarted"/>
+          <include name="verifyclickEndStatusRowDetails"/>
+          <include name="setup"/>
+          <include name="driverquit"/>
+        </methods>
+      </class> <!-- TestClass.RequestInformationTabTest -->
+      <class name="TestClass.SupplierEditProfilePageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierEditProfilePageTest -->
+      <class name="TestClass.SupplierPurchaseOrderPageTest">
+        <methods>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyAcceptButtonColor"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyShowingLabel"/>
+          <include name="verifyTitle"/>
+          <include name="verifyRejectButtonColor"/>
+          <include name="verifyColumnBidID"/>
+          <include name="verifyPurchaseHeading"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="setup"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyHeading"/>
+          <include name="verifySparePartLabel"/>
+          <include name="verifyRejectButtonLabel"/>
+          <include name="verifyColumnSparePart"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyColumnRequestID"/>
+          <include name="verifyAcceptButtonLabel"/>
+        </methods>
+      </class> <!-- TestClass.SupplierPurchaseOrderPageTest -->
+      <class name="TestClass.GarageEditProfilePageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageEditProfilePageTest -->
+      <class name="TestClass.BiddingDateDropdownTest">
+        <methods>
+          <include name="verifyNext30ButtonLabel"/>
+          <include name="verifyNext7ButtonClick"/>
+          <include name="verifylastMonthButtonLabel"/>
+          <include name="verifyNext30ButtonClick"/>
+          <include name="verifyThisMonthButtonClick"/>
+          <include name="driverquit"/>
+          <include name="verifyYesterdayButtonLabel"/>
+          <include name="verifySubmitButtonClick"/>
+          <include name="verifyCancelButtonLabel"/>
+          <include name="verifyLast7ButtonClick"/>
+          <include name="verifyTodayButtonClick"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyNext7ButtonLabel"/>
+          <include name="verifySubmitButtonLabel"/>
+          <include name="verifyTodayButtonHoverColor"/>
+          <include name="verifythisMonthButtonLabel"/>
+          <include name="verifyTomorrowButtonClick"/>
+          <include name="verifyLastMonthButtonClick"/>
+          <include name="verifyTodayButtonLabel"/>
+          <include name="setup"/>
+          <include name="verifyCancelButtonClick"/>
+          <include name="verifyLast7ButtonLabel"/>
+          <include name="verifyTomorrowButtonLabel"/>
+          <include name="verifyCustomButtonLabel"/>
+          <include name="verifyYesterdayButtonClick"/>
+        </methods>
+      </class> <!-- TestClass.BiddingDateDropdownTest -->
+      <class name="TestClass.MyBidTabTest">
+        <methods>
+          <include name="verifyconfirmationboxCancelbuttonLable"/>
+          <include name="verifyResetButtonColor"/>
+          <include name="verifynotificationDescription"/>
+          <include name="verifySaveButtonLabel"/>
+          <include name="verifyclickEndStatusRow"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifydreturnpolicyLabel"/>
+          <include name="verifyHoverDisable"/>
+          <include name="verifyinputs"/>
+          <include name="verifynotificationTitle"/>
+          <include name="verifyconfirmationboxTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyInputDisabled"/>
+          <include name="verifySaveButtonColor"/>
+          <include name="verifydescriptionLabel"/>
+          <include name="verifyphotoLabel"/>
+          <include name="verifypriceLabel"/>
+          <include name="verifyResetButtonLabel"/>
+          <include name="verifyconfirmationboxDescription"/>
+          <include name="setup"/>
+          <include name="verifyInputEnabled"/>
+          <include name="verifyconfirmationboxOkbuttonLable"/>
+          <include name="verifywarrantyLabel"/>
+          <include name="verifyclickStartedStatusRow"/>
+          <include name="verifyEditButtonLabel"/>
+        </methods>
+      </class> <!-- TestClass.MyBidTabTest -->
+      <class name="TestClass.SupplierLoginPageTest">
+        <methods>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierLoginPageTest -->
+      <class name="TestClass.SupplierUserManagementPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierUserManagementPageTest -->
+      <class name="TestClass.GarageLoginPageTest">
+        <methods>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageLoginPageTest -->
+      <class name="TestClass.GarageEditAgentPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageEditAgentPageTest -->
+      <class name="TestClass.SupplierEditAgentPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierEditAgentPageTest -->
+      <class name="TestClass.SupplierDashboardPageTest">
+        <methods>
+          <include name="verifyclickusermanagement"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyTitle"/>
+          <include name="verifyclickavailaberequest"/>
+          <include name="verifyclickeditagent"/>
+          <include name="verifyclicknotification"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyclickpurchase"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.SupplierDashboardPageTest -->
+      <class name="TestClass.GaragePartRequestPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GaragePartRequestPageTest -->
+      <class name="TestClass.GarageBidReviewPageTest">
+        <methods>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyHeading"/>
+          <include name="verifyTitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageBidReviewPageTest -->
+      <class name="TestClass.GarageDashboardPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestClass.GarageDashboardPageTest -->
+      <class name="TestClass.SupplierAvailableRequestPageTest">
+        <methods>
+          <include name="verifymyBidTabLabel"/>
+          <include name="verifyShowEntriesValues"/>
+          <include name="verifyBiddingStatusRowCounts"/>
+          <include name="verifyColumnCode"/>
+          <include name="verifyDefaultSearch"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyColumnBiddingStarts"/>
+          <include name="verifyDefaultWinningStatusDropdown"/>
+          <include name="verifyrequestInformationTabLabel"/>
+          <include name="verifyColumnDateAscending"/>
+          <include name="verifyShowingPaginationPreviousLabel"/>
+          <include name="verifyColumnBiddingEndsDescending"/>
+          <include name="verifyCountsSparePartDropdown"/>
+          <include name="verifShowEntriesSelect"/>
+          <include name="verifyInputSearch"/>
+          <include name="verifyShowingLabel"/>
+          <include name="verifyColumnBiddingEndsAscending"/>
+          <include name="verifyBiddingStatusWithTable"/>
+          <include name="verifyDefaultShowEntriesDropdown"/>
+          <include name="verifyBiddingStatusSelect"/>
+          <include name="verifyColumnFBiddingEnds"/>
+          <include name="verifyDefaultBiddingStatusDropdown"/>
+          <include name="verifySparePartValues"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyclickRequestInformationTab"/>
+          <include name="verifyColumnFBiddingStarts"/>
+          <include name="verifyColumnSparePartDescending"/>
+          <include name="verifyclickmakebidbutton"/>
+          <include name="verifyColumnDateDescending"/>
+          <include name="verifyCountsWinningStatusDropdown"/>
+          <include name="verifyWinningStatusRowCounts"/>
+          <include name="setup"/>
+          <include name="verifyColumnFSparePart"/>
+          <include name="verifySparePartSelect"/>
+          <include name="verifyColumnSparePartsAscending"/>
+          <include name="verifyDefaultactiveTab"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="verifyDefaultSparePartDropdown"/>
+          <include name="verifySparePartWithTable"/>
+          <include name="verifyColumnFStatus"/>
+          <include name="verifyWinningStatusSelect"/>
+          <include name="verifyWinningStatusValues"/>
+          <include name="verifyHoverPaginationPrevious"/>
+          <include name="driverquit"/>
+          <include name="verifyColumnBiddingStartsDescending"/>
+          <include name="verifyHeading"/>
+          <include name="verifyClickPaginationPreviousLabel"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyDefaultBiddingDateDropdown"/>
+          <include name="verifyClickPaginationNextLabel"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifySparePartRowCounts"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyTitle"/>
+          <include name="verifyColumnCodeAscending"/>
+          <include name="verifyBiddingStatusValues"/>
+          <include name="verifyColumnFCode"/>
+          <include name="verifyCountsShowEntriesDropdown"/>
+          <include name="verifyColumnBiddingStartsAscending"/>
+          <include name="verifyCountsBiddingStatusDropdown"/>
+          <include name="verifyHoverPaginationNext"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyWinningStatusWithTable"/>
+          <include name="verifySparePartLabel"/>
+          <include name="verifyclickMyBidTab"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyColumnFDate"/>
+          <include name="verifyColumnCodeDescending"/>
+          <include name="verifyShowingPaginationNextLabel"/>
+          <include name="verifyColumnSparePart"/>
+          <include name="verifyColumnStatusAscending"/>
+          <include name="verifyColumnStatusDescending"/>
+          <include name="verifyShowEntriesRowCounts"/>
+          <include name="verifyColumnBiddingEnds"/>
+        </methods>
+      </class> <!-- TestClass.SupplierAvailableRequestPageTest -->
+      <class name="TestClass.GarageNotificationPageTest">
+        <methods>
+          <include name="verifyTimeColumnLabel"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyMessageStatusLabel"/>
+          <include name="verifyHeading"/>
+          <include name="driverquit"/>
+          <include name="verifyReadStatusValues"/>
+          <include name="setup"/>
+          <include name="verifyMessageGroupLabel"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyReadStatusColumnLabel"/>
+          <include name="verifyHeadingColumnLabel"/>
+          <include name="verifyEmailSendColumnLabel"/>
+          <include name="verifyDateColumnLabel"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyTitle"/>
+        </methods>
+      </class> <!-- TestClass.GarageNotificationPageTest -->
+      <class name="TestClass.SupplierNotificationPageTest">
+        <methods>
+          <include name="verifyHeading"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyReadStatusValues"/>
+          <include name="verifyTimeColumnLabel"/>
+          <include name="driverquit"/>
+          <include name="verifyTitle"/>
+          <include name="setup"/>
+          <include name="verifyEmailSendColumnLabel"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyHeadingColumnLabel"/>
+          <include name="verifyMessageGroupLabel"/>
+          <include name="verifySearchLabel"/>
+          <include name="verifyMessageStatusLabel"/>
+          <include name="verifyDateColumnLabel"/>
+          <include name="verifyReadStatusColumnLabel"/>
+        </methods>
+      </class> <!-- TestClass.SupplierNotificationPageTest -->
+      <class name="TestClass.GaragePurchaseOrderPageTest">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="verifyBiddingDateLabel"/>
+          <include name="verifyBiddingStatusLabel"/>
+          <include name="verifyPurchaseHeading"/>
+          <include name="verifyColumnBidID"/>
+          <include name="verifyShowEntriesLabel"/>
+          <include name="verifyShowingLabel"/>
+          <include name="setup"/>
+          <include name="verifySparePartLabel"/>
+          <include name="driverquit"/>
+          <include name="verifyHeading"/>
+          <include name="verifyColumnStatus"/>
+          <include name="verifyWinningStatusLabel"/>
+          <include name="verifyColumnDate"/>
+          <include name="verifyColumnRequestID"/>
+          <include name="verifyclickeditprofile"/>
+          <include name="verifyvalidlogin"/>
+          <include name="verifyColumnSparePart"/>
+        </methods>
+      </class> <!-- TestClass.GaragePurchaseOrderPageTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

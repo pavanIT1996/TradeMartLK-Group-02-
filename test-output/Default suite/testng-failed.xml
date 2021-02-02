@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestClass.RequestInformationTabTest">
+      <class name="TestClass.SupplierDashboardPageTest">
         <methods>
-          <include name="verifypartDescriptionEnd"/>
-          <include name="verifydescriptionLabel"/>
-          <include name="verifypartNameEnd"/>
-          <include name="verifypartDescriptionStarted"/>
+          <include name="verifyclickpurchase"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestClass.RequestInformationTabTest -->
+      </class> <!-- TestClass.SupplierDashboardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

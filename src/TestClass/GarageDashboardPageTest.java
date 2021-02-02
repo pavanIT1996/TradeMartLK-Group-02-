@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.GaragePartRequestPage;
@@ -16,7 +17,7 @@ public class GarageDashboardPageTest extends GarageLoginPageTest {
 		String actualHeading = objHomePage.getheading();
 		String expectedHeading = "Garage Dashboard";
 		AssertJUnit.assertEquals("Heading Incorrect", expectedHeading, actualHeading);
-		driver.quit();
+//		driver.quit();
 	}
 
 //	@Test(priority = 1)
@@ -67,5 +68,10 @@ public class GarageDashboardPageTest extends GarageLoginPageTest {
 //		objHomePage.clickPurchasePage();
 //		//driver.quit();
 //	}
+	
+	@AfterTest
+	public void driverquit() {
+		driver.quit();
+	}
 
 }

@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.GaragePartRequestPage;
@@ -25,6 +26,10 @@ public class GaragePartRequestPageTest extends GarageLoginPageTest{
 		String actualTitle = objGarPartReqPage.getTitle();
 		String expectedTitle = "Part Request";
 		AssertJUnit.assertEquals("Title Incorrect", expectedTitle, actualTitle);
+	}
+	
+	@AfterTest
+	public void driverquit() {
 		driver.quit();
 	}
 }

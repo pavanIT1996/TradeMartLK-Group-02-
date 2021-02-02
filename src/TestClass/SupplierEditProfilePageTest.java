@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.SupplierEditProfilePage;
@@ -26,6 +27,10 @@ public class SupplierEditProfilePageTest extends SupplierLoginPageTest{
 		String actualTitle = objSupEditProPage.getHeading();
 		String expectedTitle = "Edit Profile";
 		AssertJUnit.assertEquals("Title Incorrect", expectedTitle, actualTitle);
+	}
+	
+	@AfterTest
+	public void driverquit() {
 		driver.quit();
 	}
 

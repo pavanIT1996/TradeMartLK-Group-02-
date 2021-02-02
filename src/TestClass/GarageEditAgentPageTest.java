@@ -1,6 +1,7 @@
 package TestClass;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import WebPageClass.GarageEditAgentPage;
@@ -25,6 +26,10 @@ public class GarageEditAgentPageTest extends GarageLoginPageTest{
 		String actualHeading = objGarEditAgePage.getHeading();
 		String expectedHeading = "Edit Agent Information";
 		AssertJUnit.assertEquals("Title Incorrect", expectedHeading, actualHeading);
+	}
+	
+	@AfterTest
+	public void driverquit() {
 		driver.quit();
 	}
 }
